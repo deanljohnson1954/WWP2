@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule a Consultation | Withbert W. Payne, CPA Executive LTC Planning</title>
+  <meta name="description" content="Schedule a no-obligation consultation or request a one-page carrier illustration. Simple, professional contact for serious long-term care planning conversations.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav__brand">
+    <span class="nav__name">Withbert W. Payne, CPA</span>
+    <span class="nav__tagline">Executive LTC Planning</span>
+  </a>
+  <ul class="nav__links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="why-ltc.html">Why LTC</a></li>
+    <li><a href="solutions.html">Solutions</a></li>
+    <li><a href="carrier-comparison.html">Carrier Analysis</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="articles.html">Articles</a></li>
+    <li><a href="contact.html" class="nav__cta">Schedule a Consultation</a></li>
+  </ul>
+  <button class="nav__toggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Get in Touch</div>
+    <h1>Schedule a Consultation</h1>
+    <p>A focused, no-obligation conversation to evaluate your long-term care exposure and determine what — if anything — belongs in your retirement plan.</p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: Info -->
+      <div class="contact-info">
+        <div class="eyebrow">What to Expect</div>
+        <h3>A Consultative, Not Transactional, Conversation</h3>
+        <p style="margin-top:1rem;">The initial consultation is focused on understanding your situation — not on presenting products. It typically covers:</p>
+        <ul style="list-style:disc;padding-left:1.5rem;color:var(--text-mid);font-size:0.88rem;line-height:2.1;margin-bottom:2rem;">
+          <li>Your retirement income structure and asset base</li>
+          <li>Family history and care risk factors</li>
+          <li>Current insurance or LTC coverage, if any</li>
+          <li>Planning objectives and concerns</li>
+          <li>Whether a formal analysis and illustration is appropriate</li>
+        </ul>
+
+        <div class="contact-detail">
+          <div class="contact-detail__icon">&#128222;</div>
+          <div>
+            <div class="contact-detail__label">Phone</div>
+            <div class="contact-detail__value">Available upon request</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail__icon">&#128205;</div>
+          <div>
+            <div class="contact-detail__label">Location</div>
+            <div class="contact-detail__value">San Francisco Bay Area &amp; Northern California<br>Phone and video consultations available nationally</div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-detail__icon">&#128337;</div>
+          <div>
+            <div class="contact-detail__label">Response Time</div>
+            <div class="contact-detail__value">Responses within one business day</div>
+          </div>
+        </div>
+
+        <div style="background:var(--silver-pale);border-radius:6px;padding:1.75rem;margin-top:1rem;border-left:3px solid var(--gold);">
+          <div class="eyebrow" style="margin-bottom:0.5rem;">One-Page Illustration</div>
+          <p style="font-size:0.85rem;color:var(--text-mid);margin:0;">If you prefer to start with a comparison, request a one-page illustration — a side-by-side carrier comparison for your specific age and benefit objectives. Use the form and select "One-Page Illustration" as your request type.</p>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div id="illustration">
+        <form class="form" id="contactForm" novalidate>
+          <div class="eyebrow" style="margin-bottom:1rem;display:block;">Contact Form</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="First name" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Last name" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(415) 000-0000">
+          </div>
+
+          <div class="form-group">
+            <label for="preferred">Preferred Contact Method</label>
+            <select id="preferred" name="preferred">
+              <option value="">Select a preference</option>
+              <option value="email">Email</option>
+              <option value="phone">Phone call</option>
+              <option value="video">Video call (Zoom / Teams)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="requestType">Request Type</label>
+            <select id="requestType" name="requestType">
+              <option value="">What are you looking for?</option>
+              <option value="consultation">Initial Consultation</option>
+              <option value="illustration">One-Page Carrier Illustration</option>
+              <option value="both">Consultation + Illustration</option>
+              <option value="question">General Question</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dob1">Date of Birth (Primary)</label>
+              <input type="date" id="dob1" name="dob1">
+            </div>
+            <div class="form-group">
+              <label for="dob2">Date of Birth (Spouse / Partner)</label>
+              <input type="date" id="dob2" name="dob2">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Additional Context (Optional)</label>
+            <textarea id="message" name="message" placeholder="Any background, specific questions, or context that would be helpful..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary form__submit">Submit Request</button>
+
+          <div id="successMessage">
+            Your request has been submitted. You will hear back within one business day.
+          </div>
+
+          <p class="form-disclaimer">
+            Your information is kept strictly confidential. This form is the first step in a professional engagement — not a sales process. Submitting this form does not create an obligation of any kind.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT HAPPENS NEXT -->
+<section class="section section--pale">
+  <div class="container">
+    <div class="section-header center">
+      <div class="eyebrow">The Process</div>
+      <h2>What Happens After You Reach Out</h2>
+      <div class="divider center"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem;max-width:900px;margin:0 auto;">
+      <div style="text-align:center;padding:1.75rem;">
+        <div style="width:52px;height:52px;background:var(--navy-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--gold);">1</div>
+        <h4 style="margin-bottom:0.625rem;">Response Within One Business Day</h4>
+        <p style="font-size:0.85rem;color:var(--text-mid);">A brief acknowledgment confirming receipt and a proposed time to connect.</p>
+      </div>
+      <div style="text-align:center;padding:1.75rem;">
+        <div style="width:52px;height:52px;background:var(--navy-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--gold);">2</div>
+        <h4 style="margin-bottom:0.625rem;">Initial Consultation (30–45 min)</h4>
+        <p style="font-size:0.85rem;color:var(--text-mid);">A focused conversation to understand your financial profile, care risk factors, and planning objectives.</p>
+      </div>
+      <div style="text-align:center;padding:1.75rem;">
+        <div style="width:52px;height:52px;background:var(--navy-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--gold);">3</div>
+        <h4 style="margin-bottom:0.625rem;">Analysis and Illustration</h4>
+        <p style="font-size:0.85rem;color:var(--text-mid);">A structured carrier comparison and benefit illustration tailored to your specific situation.</p>
+      </div>
+      <div style="text-align:center;padding:1.75rem;">
+        <div style="width:52px;height:52px;background:var(--navy-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;color:var(--gold);">4</div>
+        <h4 style="margin-bottom:0.625rem;">Your Decision, at Your Pace</h4>
+        <p style="font-size:0.85rem;color:var(--text-mid);">No pressure, no follow-up cadence. A recommendation and the information to evaluate it carefully.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-name">Withbert W. Payne, CPA</div>
+        <div class="footer__brand-tagline">Executive LTC Planning</div>
+        <p class="footer__bio">Independent long-term care planning for professionals, executives, and their families. Analytical. Consultative. Carrier-neutral.</p>
+      </div>
+      <div>
+        <div class="footer__heading">Planning</div>
+        <ul class="footer__links">
+          <li><a href="why-ltc.html">Why LTC Planning</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="carrier-comparison.html">Carrier Analysis</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__heading">Resources</div>
+        <ul class="footer__links">
+          <li><a href="articles.html">Planning Articles</a></li>
+          <li><a href="about.html">About Withbert W. Payne, CPA</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__heading">Office</div>
+        <ul class="footer__links">
+          <li><a href="#">San Francisco Bay Area</a></li>
+          <li><a href="#">Northern California</a></li>
+          <li><a href="#">Video consultations nationally</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__disclaimer">
+        This website is for educational purposes only and does not constitute personalized insurance, legal, or financial advice. Coverage availability, benefits, and premiums vary by individual health status, age, state of residence, and product selection. Insurance products are subject to underwriting approval and policy terms and conditions. Carrier financial strength ratings are subject to change. Withbert W. Payne, CPA is a licensed insurance professional. License information available upon request. Submitting the contact form does not create a client relationship or any obligation.
+      </p>
+      <div class="footer__copyright">
+        <span>&copy; 2026 Withbert W. Payne, CPA — Executive LTC Planning. All rights reserved.</span>
+        <span>CPA &middot; CGMA &middot; FCA (England &amp; Wales)</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

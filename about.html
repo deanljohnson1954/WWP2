@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Withbert W. Payne, CPA | Insurance Review Services</title>
+  <meta name="description" content="Over 40 years in finance, audit, and insurance. CPA, FCA, CGMA. Founder of Insurance Review Services — independent LTC and life insurance analysis for professionals and high-net-worth families in the San Francisco Bay Area.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .timeline { display: flex; flex-direction: column; gap: 0; margin: 2rem 0; }
+    .timeline-item {
+      display: flex;
+      gap: 1.5rem;
+      padding-bottom: 2rem;
+      position: relative;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 40px;
+      bottom: 0;
+      width: 1px;
+      background: var(--silver-light);
+    }
+    .timeline-item:last-child::before { display: none; }
+    .timeline-dot {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--navy-deep);
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+    }
+    .timeline-body { padding-top: 0.5rem; flex: 1; }
+    .timeline-org {
+      font-weight: 700;
+      color: var(--navy-deep);
+      font-size: 0.92rem;
+      margin-bottom: 0.15rem;
+    }
+    .timeline-dates {
+      font-size: 0.7rem;
+      color: var(--silver);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.2rem;
+    }
+    .timeline-role {
+      font-size: 0.76rem;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .timeline-desc { font-size: 0.87rem; color: var(--text-mid); line-height: 1.65; margin: 0; }
+    .service-block {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 2.5rem 3rem;
+      box-shadow: 0 2px 24px rgba(13,27,46,0.07);
+      border-left: 4px solid var(--gold);
+    }
+    .service-block h3 { margin-bottom: 1rem; }
+    .service-block p { font-size: 0.92rem; color: var(--text-mid); }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-size: 0.78rem;
+      color: var(--silver-light);
+      margin-bottom: 0.5rem;
+    }
+    .contact-item a { color: var(--gold); transition: color 0.2s; }
+    .contact-item a:hover { color: var(--gold-light); }
+    .contact-item-icon { font-size: 0.8rem; flex-shrink: 0; }
+    .proof-block {
+      background: rgba(196,152,42,0.08);
+      border: 1px solid rgba(196,152,42,0.25);
+      border-radius: 6px;
+      padding: 1.5rem 1.75rem;
+      margin: 1.5rem 0;
+    }
+    .proof-block__number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+    .proof-block__label {
+      font-size: 0.83rem;
+      color: var(--text-mid);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav__brand">
+    <span class="nav__name">Withbert W. Payne, CPA</span>
+    <span class="nav__tagline">Executive LTC Planning</span>
+  </a>
+  <ul class="nav__links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="why-ltc.html">Why LTC</a></li>
+    <li><a href="solutions.html">Solutions</a></li>
+    <li><a href="carrier-comparison.html">Carrier Analysis</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="articles.html">Articles</a></li>
+    <li><a href="contact.html" class="nav__cta">Schedule a Consultation</a></li>
+  </ul>
+  <button class="nav__toggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow">Background &amp; Credentials</div>
+    <h1>About Withbert W. Payne, CPA</h1>
+    <p>Founder &amp; President, Insurance Review Services — over 40 years in finance, audit, and insurance. Independent policy review for professionals, executives, and high-net-worth families throughout the San Francisco Bay Area.</p>
+  </div>
+</section>
+
+<!-- MAIN BIO SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Sidebar -->
+      <div class="about-sidebar">
+        <div class="about-sidebar__card">
+          <img src="images/bert-payne.jpg" alt="Withbert W. Payne, CPA" style="width:100%;border-radius:6px;margin-bottom:1.5rem;display:block;">
+          <div class="about-sidebar__name">Withbert W. Payne, CPA</div>
+          <div class="about-sidebar__title" style="margin-bottom:0.25rem;">Founder &amp; President</div>
+          <div class="about-sidebar__title" style="margin-bottom:1.5rem;">Insurance Review Services</div>
+
+          <div style="border-top:1px solid rgba(196,152,42,0.2);padding-top:1.25rem;margin-bottom:1.25rem;text-align:left;">
+            <div class="contact-item">
+              <span class="contact-item-icon">&#128222;</span>
+              <a href="tel:9257086501">(925) 708-6501</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item-icon">&#9993;</span>
+              <a href="mailto:withbert.payne@insurance-review-services.com" style="font-size:0.72rem;">withbert.payne@<br>insurance-review-services.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item-icon">&#127760;</span>
+              <a href="http://www.ltccpas.com" target="_blank" rel="noopener">ltccpas.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-item-icon">&#128205;</span>
+              <span style="color:var(--silver);">San Ramon, CA</span>
+            </div>
+          </div>
+
+          <div class="cred-tags">
+            <span class="cred-tag">CPA</span>
+            <span class="cred-tag">CGMA</span>
+            <span class="cred-tag">FCA</span>
+            <span class="cred-tag">Cambridge</span>
+            <span class="cred-tag">Price Waterhouse</span>
+            <span class="cred-tag">New York Life</span>
+            <span class="cred-tag">40+ Years Experience</span>
+            <span class="cred-tag">Independent</span>
+          </div>
+
+          <div style="border-top:1px solid rgba(196,152,42,0.2);margin-top:1.5rem;padding-top:1.25rem;text-align:center;">
+            <div style="font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--silver);line-height:1.8;">
+              No Cost &nbsp;&middot;&nbsp; No Obligation<br>Independent Guidance
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="about-content">
+
+        <h3>A Distinctive Professional Foundation</h3>
+        <p>
+          Withbert W. Payne, CPA received his early education at Oak Grove Boys' School in the Himalayas, earning his General Certificate of Education in Mathematics from the University of Cambridge. He subsequently trained as a Chartered Accountant at H. Foulkes Lynch School of Accountancy in London, earning his Fellowship of the Institute of Chartered Accountants in England and Wales — the FCA designation — one of the most demanding and internationally respected professional accounting qualifications in the world.
+        </p>
+        <p>
+          That formation — Cambridge, the ICAEW, and early training in the rigorous analytical standards of British professional accounting — established the intellectual framework that defines every client engagement today.
+        </p>
+
+        <div class="about-highlight">
+          "My background is not in selling insurance. It is in auditing, analyzing, and evaluating financial structures independently. That same discipline applies to every policy review — no carrier bias, no promotional agenda, no pressure."
+        </div>
+
+        <h3 style="margin-top:2.5rem;">Track Record</h3>
+        <p style="color:var(--text-mid);font-size:0.92rem;">More than six decades of experience have produced a measurable, consistent outcome for clients.</p>
+        <div class="g-2col--tight" style="margin:1.25rem 0 2rem;">
+          <div class="proof-block">
+            <div class="proof-block__number">30–40%</div>
+            <div class="proof-block__label">Average improvement in policy efficiency achieved across client reviews</div>
+          </div>
+          <div class="proof-block">
+            <div class="proof-block__number">$3.8M</div>
+            <div class="proof-block__label">Increase in guaranteed death benefit achieved for one client — with no material increase in premiums</div>
+          </div>
+        </div>
+
+        <h3>Career Timeline</h3>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot">1</div>
+            <div class="timeline-body">
+              <div class="timeline-org">Insurance Review Services — San Ramon, California</div>
+              <div class="timeline-dates">2012 – Present</div>
+              <div class="timeline-role">Founder &amp; President (Current)</div>
+              <p class="timeline-desc">Independent CPA-level reviews of life, disability, long-term care, and business insurance portfolios for professionals, executives, trustees, and families. Consistently achieves 30–40% improvement in policy efficiency. Coordinates reviews with clients' CPAs, attorneys, and wealth advisors for fully integrated planning outcomes.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot">2</div>
+            <div class="timeline-body">
+              <div class="timeline-org">New York Life Insurance Company — Brentwood, California</div>
+              <div class="timeline-dates">2009 – 2012</div>
+              <div class="timeline-role">Insurance Professional</div>
+              <p class="timeline-desc">Served accounting and legal professionals with tailored life and long-term care solutions, deepening carrier-side expertise in the insurance needs of high-income clients.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot">3</div>
+            <div class="timeline-body">
+              <div class="timeline-org">Starcare International Inc. — Walnut Creek, California</div>
+              <div class="timeline-dates">1980 – 2009</div>
+              <div class="timeline-role">President &amp; Founder</div>
+              <p class="timeline-desc">Founded and led a hospital financial consulting firm specializing in Medicare reimbursement strategy and financial performance improvement for healthcare institutions. Grew the practice over nearly three decades, representing more than 75 hospitals, before completing a successful sale in 2001 and continuing operations through 2009.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot">4</div>
+            <div class="timeline-body">
+              <div class="timeline-org">CNA Life Insurance Company — Chicago, IL</div>
+              <div class="timeline-dates">1976 – 1978</div>
+              <div class="timeline-role">Internal Audit Manager</div>
+              <p class="timeline-desc">Managed internal audits across Life and Health divisions — acquiring direct operational knowledge of how insurance companies assess risk, structure coverage, and manage financial performance. Experience that directly informs policy analysis for clients today.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot">5</div>
+            <div class="timeline-body">
+              <div class="timeline-org">Blue Cross of Northern California / Blue Cross Blue Shield — Oakland, CA &amp; Chicago, IL</div>
+              <div class="timeline-dates">1971 – 1980</div>
+              <div class="timeline-role">Manager, Hospital Audits — Medicare Program</div>
+              <p class="timeline-desc">Managed hospital audits and appeals across Northern California and Chicago for the Medicare program, overseeing compliance and financial accuracy across a large portfolio of hospital accounts. Developed deep expertise in healthcare reimbursement and insurance operations from within a major national insurer.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot">6</div>
+            <div class="timeline-body">
+              <div class="timeline-org">Price Waterhouse — London, United Kingdom</div>
+              <div class="timeline-dates">1968 – 1971</div>
+              <div class="timeline-role">Senior Auditor</div>
+              <p class="timeline-desc">Audited public companies in London under one of the world's premier professional services firms. Developed the rigorous independent analytical standards that remain central to his practice today.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot">7</div>
+            <div class="timeline-body">
+              <div class="timeline-org">Hagley Knight &amp; Co., Chartered Accountants — London, England</div>
+              <div class="timeline-dates">1963 – 1968</div>
+              <div class="timeline-role">Articled Clerk (Trainee Chartered Accountant)</div>
+              <p class="timeline-desc">Completed formal articleship training — the foundation of a career built on meticulous financial analysis — auditing small and medium-sized businesses under the demanding standards of English professional accountancy.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <h3>Credentials &amp; Education</h3>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:0;">
+          <li style="display:flex;align-items:flex-start;gap:1.25rem;padding:1rem 0;border-bottom:1px solid var(--silver-pale);">
+            <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold);min-width:58px;">CPA</span>
+            <div>
+              <div style="font-weight:600;color:var(--navy-deep);font-size:0.9rem;margin-bottom:0.2rem;">Certified Public Accountant — California</div>
+              <div style="font-size:0.83rem;color:var(--text-mid);">Issued by the California Board of Accountancy. Requires rigorous examination, experience requirements, and continuing professional education.</div>
+            </div>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:1.25rem;padding:1rem 0;border-bottom:1px solid var(--silver-pale);">
+            <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold);min-width:58px;">FCA</span>
+            <div>
+              <div style="font-weight:600;color:var(--navy-deep);font-size:0.9rem;margin-bottom:0.2rem;">Fellow Chartered Accountant — Institute of Chartered Accountants in England &amp; Wales</div>
+              <div style="font-size:0.83rem;color:var(--text-mid);">The Fellow grade — the highest membership level — of the ICAEW, founded in 1880. Widely regarded as one of the most rigorous professional accounting qualifications in the world. Equivalent to the CPA in the United States. Earned through formal articleship training and examination at H. Foulkes Lynch School of Accountancy, London (1963–1968).</div>
+            </div>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:1.25rem;padding:1rem 0;border-bottom:1px solid var(--silver-pale);">
+            <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold);min-width:58px;">CGMA</span>
+            <div>
+              <div style="font-weight:600;color:var(--navy-deep);font-size:0.9rem;margin-bottom:0.2rem;">Chartered Global Management Accountant</div>
+              <div style="font-size:0.83rem;color:var(--text-mid);">A joint designation of the AICPA and CIMA, recognizing expertise in management accounting and strategic financial leadership across global organizations.</div>
+            </div>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:1.25rem;padding:1rem 0;border-bottom:1px solid var(--silver-pale);">
+            <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold);min-width:58px;">GCE</span>
+            <div>
+              <div style="font-weight:600;color:var(--navy-deep);font-size:0.9rem;margin-bottom:0.2rem;">General Certificate of Education — Mathematics</div>
+              <div style="font-size:0.83rem;color:var(--text-mid);">Oak Grove Boys' School, Himalayas (1956–1961). Examination administered by the University of Cambridge.</div>
+            </div>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:1.25rem;padding:1rem 0;">
+            <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--gold);min-width:58px;">CA</span>
+            <div>
+              <div style="font-weight:600;color:var(--navy-deep);font-size:0.9rem;margin-bottom:0.2rem;">Chartered Accountant Training — England &amp; Wales</div>
+              <div style="font-size:0.83rem;color:var(--text-mid);">H. Foulkes Lynch School of Accountancy, London (1963–1968). Professional accountancy training leading to Fellowship of the ICAEW.</div>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT INSURANCE REVIEW SERVICES -->
+<section class="section section--pale">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Insurance Review Services</div>
+      <h2>What We Do — and How We Do It</h2>
+      <div class="divider"></div>
+      <p style="margin-top:1.25rem;max-width:700px;color:var(--text-mid);font-size:0.95rem;">
+        Insurance Review Services provides independent, CPA-level reviews of life, disability, long-term care, and business insurance for professionals, executives, business owners, and families throughout the San Francisco Bay Area. Our objective is straightforward: maximize benefit, minimize cost, and ensure that no premium dollar is wasted.
+      </p>
+    </div>
+
+    <div class="g-2col--mid" style="margin-bottom:2rem;">
+      <div class="service-block">
+        <div class="eyebrow" style="margin-bottom:0.75rem;">Our Objective</div>
+        <h3>Maximize Benefit. Minimize Cost.</h3>
+        <p>
+          We identify insurance structures that minimize our clients' costs and maximize their benefits — accomplished through specialized product knowledge and long-standing relationships with leading carriers. In many cases, we identify coverage structures that provide a <strong>full return of all premiums paid</strong>, less any benefits received. The premiums you pay are never simply lost.
+        </p>
+        <p>
+          Our track record reflects this focus: a 30–40% average improvement in policy efficiency across client engagements. In one recent case, a policy review resulted in a $3.8 million increase in guaranteed death benefit — with no material increase in premiums.
+        </p>
+      </div>
+      <div class="service-block" style="border-left-color:var(--silver-light);">
+        <div class="eyebrow" style="margin-bottom:0.75rem;">Our Approach</div>
+        <h3>Analyze. Design. Coordinate.</h3>
+        <p>
+          Every engagement begins with a thorough analysis of the client's existing coverage, financial profile, and protection objectives. We design a responsible program and recommend a cost-effective strategy tailored to the individual situation.
+        </p>
+        <p>
+          Where appropriate, we coordinate directly with the client's CPA, attorney, and wealth advisor — ensuring that insurance analysis integrates fully with the broader financial and estate plan. Mr. Payne personally participates in every review.
+        </p>
+      </div>
+    </div>
+
+    <!-- Services Scope -->
+    <div style="background:var(--white);border-radius:8px;padding:2.5rem;box-shadow:0 2px 20px rgba(13,27,46,0.06);margin-bottom:2rem;">
+      <div class="eyebrow" style="margin-bottom:0.875rem;">Areas of Practice</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.5rem 2rem;">
+        <div style="font-size:0.85rem;color:var(--text-mid);padding:0.4rem 0;border-bottom:1px solid var(--silver-pale);">Long-Term Care Insurance Planning</div>
+        <div style="font-size:0.85rem;color:var(--text-mid);padding:0.4rem 0;border-bottom:1px solid var(--silver-pale);">Life Insurance Optimization</div>
+        <div style="font-size:0.85rem;color:var(--text-mid);padding:0.4rem 0;border-bottom:1px solid var(--silver-pale);">Independent Policy Reviews</div>
+        <div style="font-size:0.85rem;color:var(--text-mid);padding:0.4rem 0;border-bottom:1px solid var(--silver-pale);">ILIT / Trust-Owned Life Insurance</div>
+        <div style="font-size:0.85rem;color:var(--text-mid);padding:0.4rem 0;border-bottom:1px solid var(--silver-pale);">Business &amp; Key Person Coverage</div>
+        <div style="font-size:0.85rem;color:var(--text-mid);padding:0.4rem 0;border-bottom:1px solid var(--silver-pale);">Living Benefits Analysis</div>
+        <div style="font-size:0.85rem;color:var(--text-mid);padding:0.4rem 0;border-bottom:1px solid var(--silver-pale);">Term Conversion Analysis</div>
+        <div style="font-size:0.85rem;color:var(--text-mid);padding:0.4rem 0;border-bottom:1px solid var(--silver-pale);">Cash Value Optimization</div>
+        <div style="font-size:0.85rem;color:var(--text-mid);padding:0.4rem 0;">Disability Insurance Review</div>
+      </div>
+    </div>
+
+    <div style="background:var(--navy-deep);border-radius:8px;padding:3rem;border:1px solid rgba(196,152,42,0.2);">
+      <div class="g-2col" style="gap:3rem;">
+        <div>
+          <div class="eyebrow" style="margin-bottom:0.875rem;">Why Independent Review Matters</div>
+          <h3 style="color:var(--white);margin-bottom:1rem;">A Second Opinion Belongs in Every Insurance Decision</h3>
+          <p style="color:var(--silver);font-size:0.92rem;">
+            To avoid a conflict of interest, your coverage should be evaluated by someone other than the agent who sold it. The selling agent has an inherent interest in defending the existing policy. An independent review has no such constraint.
+          </p>
+          <p style="color:var(--silver);font-size:0.92rem;">
+            Withbert W. Payne, CPA personally conducts every review — applying the same independent analytical framework developed at Price Waterhouse and refined across more than 40 years of finance, audit, and insurance experience.
+          </p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1.25rem;">
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(196,152,42,0.18);border-radius:6px;padding:1.5rem;">
+            <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--gold);margin-bottom:0.4rem;">No Fee</div>
+            <div style="font-size:0.83rem;color:var(--silver);line-height:1.5;">All policy reviews are provided at no charge to the client. Insurance Review Services is compensated directly by the insurance carriers.</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(196,152,42,0.18);border-radius:6px;padding:1.5rem;">
+            <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--gold);margin-bottom:0.4rem;">No Obligation</div>
+            <div style="font-size:0.83rem;color:var(--silver);line-height:1.5;">An initial review creates no commitment of any kind. The process is designed to inform your decision — not to pressure it.</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(196,152,42,0.18);border-radius:6px;padding:1.5rem;">
+            <div style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--gold);margin-bottom:0.4rem;">Personal</div>
+            <div style="font-size:0.83rem;color:var(--silver);line-height:1.5;">Mr. Payne personally conducts every engagement. Reviews are not delegated to junior staff or automated systems.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENTIATORS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header center">
+      <div class="eyebrow">What Sets This Practice Apart</div>
+      <h2>The Qualifications Behind Every Review</h2>
+      <div class="divider center"></div>
+    </div>
+    <div class="points-grid">
+      <div class="point-card">
+        <div class="point-card__num">40+ Years</div>
+        <h4>Finance, Audit, and Insurance Experience</h4>
+        <p>A career spanning articleship training in London, Price Waterhouse audit, carrier-side operations at Blue Cross, CNA Life, and New York Life, and 12+ years of independent review practice.</p>
+      </div>
+      <div class="point-card">
+        <div class="point-card__num">Carrier Insight</div>
+        <h4>Inside Knowledge of How Carriers Operate</h4>
+        <p>Having worked inside Blue Cross/Blue Shield, CNA Life, and New York Life, Mr. Payne understands how insurers price coverage, manage claims, and make underwriting decisions — knowledge most independent advisors lack.</p>
+      </div>
+      <div class="point-card">
+        <div class="point-card__num">Audit Discipline</div>
+        <h4>Price Waterhouse Analytical Standards</h4>
+        <p>A foundation in rigorous independent audit at one of the world's premier professional services firms. Every engagement is approached with the objectivity and precision developed in London.</p>
+      </div>
+      <div class="point-card">
+        <div class="point-card__num">Independence</div>
+        <h4>No Carrier Allegiances. No Conflicts.</h4>
+        <p>Insurance Review Services evaluates the full market independently. The recommendation reflects the client's situation exclusively — not a distribution relationship or preferred-carrier arrangement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <div class="eyebrow" style="display:block;text-align:center;">No Cost. No Obligation.</div>
+    <h2>Request a Complimentary Policy Review</h2>
+    <p>A personal review by Withbert W. Payne, CPA — at no charge. Independent analysis of your existing or prospective coverage, with no obligation to act.</p>
+    <div class="cta-band__actions">
+      <a href="contact.html" class="btn btn-primary">Schedule a Consultation</a>
+      <a href="contact.html#illustration" class="btn btn-outline">Request a One-Page Illustration</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand-name">Withbert W. Payne, CPA</div>
+        <div class="footer__brand-tagline">Insurance Review Services</div>
+        <p class="footer__bio">Independent life and long-term care policy review and optimization for professionals and high-net-worth families. Analytical. Consultative. Carrier-neutral.</p>
+      </div>
+      <div>
+        <div class="footer__heading">Planning</div>
+        <ul class="footer__links">
+          <li><a href="why-ltc.html">Why LTC Planning</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="carrier-comparison.html">Carrier Analysis</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__heading">Resources</div>
+        <ul class="footer__links">
+          <li><a href="articles.html">Planning Articles</a></li>
+          <li><a href="about.html">About Withbert W. Payne, CPA</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__heading">Contact</div>
+        <ul class="footer__links">
+          <li><a href="tel:9257086501">(925) 708-6501</a></li>
+          <li><a href="contact.html">Schedule a Consultation</a></li>
+          <li><a href="contact.html#illustration">Request an Illustration</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__disclaimer">
+        This website is for educational purposes only and does not constitute personalized insurance, legal, or financial advice. Coverage availability, benefits, and premiums vary by individual health status, age, state of residence, and product selection. Insurance products are subject to underwriting approval and policy terms and conditions. Carrier financial strength ratings are subject to change. Withbert W. Payne, CPA is a licensed insurance professional. License information available upon request. Past results do not guarantee future outcomes.
+      </p>
+      <div class="footer__copyright">
+        <span>&copy; 2026 Insurance Review Services. All rights reserved.</span>
+        <span>CPA &middot; CGMA &middot; FCA (England &amp; Wales)</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
