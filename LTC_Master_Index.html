@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Index — LTCCPAS.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0c447c;--navy-mid:#185fa5;--navy-lt:#b5d4f4;--navy-pale:#e6f1fb;
+  --gold:#ba7517;--gold-mid:#ef9f27;--gold-lt:#fac775;--gold-pale:#faeeda;
+  --teal:#0f6e56;--teal-lt:#9fe1cb;--teal-pale:#e1f5ee;
+  --coral:#993c1d;--coral-pale:#faece7;
+  --slate:#1e3a5f;--body:#334155;--muted:#64748b;--light:#94a3b8;
+  --border:#b5d4f4;--border-lt:#dbeafe;--bg:#f0f5fb;--white:#ffffff;
+}
+body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--body);line-height:1.6}
+
+.topbar{background:var(--navy);padding:.45rem 2.5rem;display:flex;justify-content:space-between;align-items:center;}
+.topbar span{font-size:.74rem;color:var(--navy-lt);letter-spacing:.04em}
+
+.site-header{background:var(--navy);border-bottom:3px solid var(--gold);padding:0 2.5rem}
+.header-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:1.4rem 0}
+.brand-badge{width:52px;height:52px;background:var(--gold);border-radius:13px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px rgba(186,117,23,.22);flex-shrink:0}
+.brand-badge svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.6}
+.brand-name{font-family:'Lora',serif;font-size:1.65rem;font-weight:700;color:#fff;line-height:1}
+.brand-sub{font-size:.72rem;color:var(--navy-lt);letter-spacing:.14em;text-transform:uppercase;margin-top:4px}
+
+.page-hero{background:linear-gradient(135deg,#0c447c 0%,#185fa5 50%,#0f6e56 100%);padding:3rem 2.5rem 3.5rem;border-bottom:4px solid var(--gold);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 8% 65%,rgba(186,117,23,.14) 0%,transparent 45%)}
+.hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(186,117,23,.2);border:1px solid rgba(250,199,117,.35);border-radius:30px;padding:4px 14px;font-size:.72rem;font-weight:600;color:var(--gold-lt);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem}
+.page-hero h1{font-family:'Lora',serif;font-size:2.2rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:.6rem}
+.page-hero p{font-size:.95rem;color:var(--navy-lt);max-width:580px;line-height:1.65}
+
+.main-wrap{max-width:900px;margin:0 auto;padding:2.5rem 2rem 5rem}
+
+/* SECTION GROUPING */
+.index-section{margin-bottom:2rem}
+.index-section-head{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:.75rem;
+  padding-bottom:.5rem;
+  border-bottom:2px solid var(--border-lt);
+}
+.index-section-head h2{font-family:'Lora',serif;font-size:.85rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+.sec-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.dot-navy{background:var(--navy-mid)}
+.dot-gold{background:var(--gold)}
+.dot-teal{background:var(--teal)}
+.dot-coral{background:var(--coral)}
+
+/* INDEX ROW */
+.index-row{
+  display:flex;
+  align-items:center;
+  gap:0;
+  border-bottom:1px solid var(--border-lt);
+  text-decoration:none;
+  transition:background .15s;
+  border-radius:8px;
+  overflow:hidden;
+  margin-bottom:4px;
+  background:var(--white);
+  border:1.5px solid var(--border-lt);
+}
+.index-row:hover{background:var(--navy-pale);border-color:var(--border)}
+.index-row:hover .row-arrow{color:var(--navy-mid)}
+
+.row-num{
+  width:44px;flex-shrink:0;
+  text-align:center;
+  font-family:'Lora',serif;
+  font-size:.8rem;font-weight:700;
+  color:var(--light);
+  padding:.85rem .5rem;
+  border-right:1px solid var(--border-lt);
+  background:var(--bg);
+}
+.row-color{width:5px;flex-shrink:0;align-self:stretch}
+.color-navy{background:var(--navy-mid)}
+.color-gold{background:var(--gold)}
+.color-teal{background:var(--teal)}
+.color-coral{background:var(--coral)}
+
+.row-content{flex:1;padding:.85rem 1.1rem;display:flex;align-items:center;gap:1rem}
+.row-icon{width:30px;height:30px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.row-icon svg{width:14px;height:14px;fill:none;stroke-width:1.9}
+.icon-navy{background:var(--navy-pale)} .icon-navy svg{stroke:var(--navy-mid)}
+.icon-gold{background:var(--gold-pale)} .icon-gold svg{stroke:var(--gold)}
+.icon-teal{background:var(--teal-pale)} .icon-teal svg{stroke:var(--teal)}
+.icon-coral{background:var(--coral-pale)} .icon-coral svg{stroke:var(--coral)}
+
+.row-text{flex:1}
+.row-title{font-size:.92rem;font-weight:700;color:var(--slate);line-height:1.3}
+.row-desc{font-size:.75rem;color:var(--muted);margin-top:1px;line-height:1.4}
+.row-new{font-size:.62rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;background:var(--gold-pale);color:var(--gold);border:1px solid var(--gold-lt);padding:1px 6px;border-radius:8px;flex-shrink:0}
+.row-arrow{font-size:1rem;color:var(--light);flex-shrink:0;padding-right:.85rem;transition:color .15s}
+
+.site-footer{background:var(--navy);border-top:4px solid var(--gold);padding:1.75rem 2.5rem}
+.footer-inner{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-family:'Lora',serif;font-size:1rem;color:#fff;font-weight:700}
+.footer-copy{font-size:.75rem;color:var(--navy-lt)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:.75rem;color:var(--navy-lt);text-decoration:none}
+.footer-links a:hover{color:var(--gold-lt)}
+
+@media(max-width:600px){.page-hero h1{font-size:1.7rem}.row-desc{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>Insurance Review Services &nbsp;·&nbsp; LTCCPAS.com &nbsp;·&nbsp; Withbert W. Payne, CPA</span>
+  <span id="td"></span>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand-badge"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7l7-4z"/></svg></div>
+    <div>
+      <div class="brand-name">LTCCPAS.com</div>
+      <div class="brand-sub">Insurance Review Services &nbsp;·&nbsp; Withbert W. Payne, CPA</div>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Complete Site Index</div>
+    <h1>Long-Term Care Resource Library</h1>
+    <p>Every page on LTCCPAS.com — organized by topic. Click any item to go directly to that resource.</p>
+  </div>
+</div>
+
+<main class="main-wrap">
+
+  <!-- EDUCATION -->
+  <div class="index-section">
+    <div class="index-section-head"><span class="sec-dot dot-navy"></span><h2>Education &amp; Fundamentals</h2></div>
+
+    <a href="LTC_What_Is_LTC_Insurance.html" class="index-row">
+      <div class="row-num">01</div><div class="row-color color-navy"></div>
+      <div class="row-content">
+        <div class="row-icon icon-navy"><svg viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422A12 12 0 0 1 21 13.5c0 2.485-4.03 4.5-9 4.5s-9-2.015-9-4.5c0-.538.201-1.055.554-1.536L12 14z"/></svg></div>
+        <div class="row-text"><div class="row-title">What is Long-Term Care Insurance?</div><div class="row-desc">A comprehensive introduction — how it works, who needs it, and when to buy.</div></div>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_All_About_LTC.html" class="index-row">
+      <div class="row-num">02</div><div class="row-color color-navy"></div>
+      <div class="row-content">
+        <div class="row-icon icon-navy"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="row-text"><div class="row-title">All About Long-Term Care</div><div class="row-desc">Types of care settings, caregiver options, care coordination, and what to expect during a claim.</div></div>
+        <span class="row-new">New</span>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_State_Mandated.html" class="index-row">
+      <div class="row-num">03</div><div class="row-color color-navy"></div>
+      <div class="row-content">
+        <div class="row-icon icon-navy"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <div class="row-text"><div class="row-title">State Mandated LTC</div><div class="row-desc">How state-level mandates shape LTC requirements — what California employers and employees need to know.</div></div>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_Education.html" class="index-row">
+      <div class="row-num">04</div><div class="row-color color-navy"></div>
+      <div class="row-content">
+        <div class="row-icon icon-navy"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <div class="row-text"><div class="row-title">LTC Education Overview</div><div class="row-desc">Key educational resources — fact vs. fiction, how much is enough, and why now is the time to plan.</div></div>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_Newsletters.html" class="index-row">
+      <div class="row-num">05</div><div class="row-color color-navy"></div>
+      <div class="row-content">
+        <div class="row-icon icon-navy"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H4zM8 20h8M12 16v4"/></svg></div>
+        <div class="row-text"><div class="row-title">Newsletters</div><div class="row-desc">Archived newsletter editions — timely LTC planning perspectives delivered to subscribers.</div></div>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- CLAIMS & TRIGGERS -->
+  <div class="index-section">
+    <div class="index-section-head"><span class="sec-dot dot-coral"></span><h2>Claims &amp; Benefit Triggers</h2></div>
+
+    <a href="What_Initiates_a_Long-Term_Care_Claim_.html" class="index-row">
+      <div class="row-num">06</div><div class="row-color color-coral"></div>
+      <div class="row-content">
+        <div class="row-icon icon-coral"><svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m-6-8h6M4 4h16a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"/></svg></div>
+        <div class="row-text"><div class="row-title">What Initiates a Long-Term Care Claim?</div><div class="row-desc">The complete claim initiation process — ADL standards, elimination periods, physician certification.</div></div>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_Benefit_Triggers.html" class="index-row">
+      <div class="row-num">07</div><div class="row-color color-coral"></div>
+      <div class="row-content">
+        <div class="row-icon icon-coral"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div class="row-text"><div class="row-title">LTC Benefit Triggers</div><div class="row-desc">The 2-of-6 ADL deficit standard, cognitive impairment criteria, and 90-day certification requirement.</div></div>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_Why_Lifetime_Benefits.html" class="index-row">
+      <div class="row-num">08</div><div class="row-color color-coral"></div>
+      <div class="row-content">
+        <div class="row-icon icon-coral"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="row-text"><div class="row-title">Why Do I Need Lifetime Benefits?</div><div class="row-desc">The catastrophic risk argument — why planning for the average misses the point entirely.</div></div>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- PRODUCTS & SOLUTIONS -->
+  <div class="index-section">
+    <div class="index-section-head"><span class="sec-dot dot-gold"></span><h2>Products &amp; Solutions</h2></div>
+
+    <a href="LTC_Benefits.html" class="index-row">
+      <div class="row-num">09</div><div class="row-color color-gold"></div>
+      <div class="row-content">
+        <div class="row-icon icon-gold"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+        <div class="row-text"><div class="row-title">LTC Benefits</div><div class="row-desc">All 12 covered benefit categories — from informal home care to international facility coverage.</div></div>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_Customizable_Solutions.html" class="index-row">
+      <div class="row-num">10</div><div class="row-color color-gold"></div>
+      <div class="row-content">
+        <div class="row-icon icon-gold"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
+        <div class="row-text"><div class="row-title">Customizable Solutions</div><div class="row-desc">Eight flexible coverage options — whole life, annuity-based, joint coverage, qualified dollars, and more.</div></div>
+        <span class="row-new">New</span>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="SelfInsure.html" class="index-row">
+      <div class="row-num">11</div><div class="row-color color-gold"></div>
+      <div class="row-content">
+        <div class="row-icon icon-gold"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="row-text"><div class="row-title">No Need to Self-Insure</div><div class="row-desc">Why even high-net-worth clients benefit from LTC planning — the income vs. asset argument.</div></div>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_Self_Funding.html" class="index-row">
+      <div class="row-num">12</div><div class="row-color color-gold"></div>
+      <div class="row-content">
+        <div class="row-icon icon-gold"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="row-text"><div class="row-title">Self-Funding LTC</div><div class="row-desc">Why self-funding fails most people — the math behind catastrophic care events.</div></div>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_Life_Chronic_Critical.html" class="index-row">
+      <div class="row-num">13</div><div class="row-color color-gold"></div>
+      <div class="row-content">
+        <div class="row-icon icon-gold"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <div class="row-text"><div class="row-title">Life Insurance for Chronic &amp; Critical Care</div><div class="row-desc">Accelerated benefit riders on life insurance — LTC funding without a traditional LTC policy.</div></div>
+        <span class="row-new">New</span>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- FUNDING -->
+  <div class="index-section">
+    <div class="index-section-head"><span class="sec-dot dot-teal"></span><h2>Funding &amp; Payments</h2></div>
+
+    <a href="LTC_Common_Ways_To_Pay.html" class="index-row">
+      <div class="row-num">14</div><div class="row-color color-teal"></div>
+      <div class="row-content">
+        <div class="row-icon icon-teal"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM12 8v8M8 12h8"/></svg></div>
+        <div class="row-text"><div class="row-title">Common Ways to Pay for Long-Term Care</div><div class="row-desc">Government programs, traditional LTCi, self-funding, and asset-based LTC — the four options compared.</div></div>
+        <span class="row-new">New</span>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_Funding_Options.html" class="index-row">
+      <div class="row-num">15</div><div class="row-color color-teal"></div>
+      <div class="row-content">
+        <div class="row-icon icon-teal"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="row-text"><div class="row-title">Funding Options Overview</div><div class="row-desc">Premium sources, AOB durations, COB Rider, elimination periods, and international facility details.</div></div>
+        <span class="row-new">New</span>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_California_Tax.html" class="index-row">
+      <div class="row-num">16</div><div class="row-color color-teal"></div>
+      <div class="row-content">
+        <div class="row-icon icon-teal"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 8h8M8 16h5"/></svg></div>
+        <div class="row-text"><div class="row-title">California LTC Tax Considerations</div><div class="row-desc">CA-specific deductions, C-Corp 100% deductibility, state partnership program, and the CA public LTC mandate.</div></div>
+        <span class="row-new">New</span>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- COMPARISONS & STATISTICS -->
+  <div class="index-section">
+    <div class="index-section-head"><span class="sec-dot dot-navy"></span><h2>Comparisons &amp; Statistics</h2></div>
+
+    <a href="LTC_Carrier_Comparison.html" class="index-row">
+      <div class="row-num">17</div><div class="row-color color-navy"></div>
+      <div class="row-content">
+        <div class="row-icon icon-navy"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9l-6-6z"/><path d="M9 3v6h6"/></svg></div>
+        <div class="row-text"><div class="row-title">LTC Long-Term Care Insurers Comparisons</div><div class="row-desc">Independent side-by-side analysis of 9 carriers — anonymized, objective, 2026 updated.</div></div>
+        <span class="row-new">New</span>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_Key_Statistics.html" class="index-row">
+      <div class="row-num">18</div><div class="row-color color-navy"></div>
+      <div class="row-content">
+        <div class="row-icon icon-navy"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg></div>
+        <div class="row-text"><div class="row-title">LTC Key Statistics</div><div class="row-desc">National cost benchmarks, claim frequency, duration averages, care site transitions, and demographic trends.</div></div>
+        <span class="row-new">New</span>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_Sample_Illustrations.html" class="index-row">
+      <div class="row-num">19</div><div class="row-color color-navy"></div>
+      <div class="row-content">
+        <div class="row-icon icon-navy"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <div class="row-text"><div class="row-title">Sample Illustrations — Age 50 &amp; Age 60</div><div class="row-desc">Model LTC policy illustrations showing premiums, benefit amounts, inflation options, and 20-year cost comparisons.</div></div>
+        <span class="row-new">New</span>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- CHECKLISTS & APPLICATIONS -->
+  <div class="index-section">
+    <div class="index-section-head"><span class="sec-dot dot-gold"></span><h2>Checklists &amp; Applications</h2></div>
+
+    <a href="LTC_Applications_Checklist.html" class="index-row">
+      <div class="row-num">20</div><div class="row-color color-gold"></div>
+      <div class="row-content">
+        <div class="row-icon icon-gold"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
+        <div class="row-text"><div class="row-title">LTC &amp; Life Insurance Applications Checklist</div><div class="row-desc">Step-by-step checklist for completing LTC and life insurance applications without delays or errors.</div></div>
+        <span class="row-new">New</span>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_Client_Applications.html" class="index-row">
+      <div class="row-num">21</div><div class="row-color color-gold"></div>
+      <div class="row-content">
+        <div class="row-icon icon-gold"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+        <div class="row-text"><div class="row-title">LTC Client Applications</div><div class="row-desc">Client application resources, required documents, health disclosures, and underwriting guidance.</div></div>
+        <span class="row-new">New</span>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- BLOG & RESOURCES -->
+  <div class="index-section">
+    <div class="index-section-head"><span class="sec-dot dot-coral"></span><h2>Blog, LinkedIn &amp; Resources</h2></div>
+
+    <a href="LTC_Blog.html" class="index-row">
+      <div class="row-num">22</div><div class="row-color color-coral"></div>
+      <div class="row-content">
+        <div class="row-icon icon-coral"><svg viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <div class="row-text"><div class="row-title">LTC Long-Term Care Insurers Blog</div><div class="row-desc">Expert commentary, planning insights, and market updates from Withbert W. Payne, CPA.</div></div>
+        <span class="row-new">New</span>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_LinkedIn.html" class="index-row">
+      <div class="row-num">23</div><div class="row-color color-coral"></div>
+      <div class="row-content">
+        <div class="row-icon icon-coral"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+        <div class="row-text"><div class="row-title">LinkedIn Postings</div><div class="row-desc">Short-form insights, policy updates, and industry news shared with our professional network.</div></div>
+        <span class="row-new">New</span>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+    <a href="LTC_Newsletters.html" class="index-row">
+      <div class="row-num">24</div><div class="row-color color-coral"></div>
+      <div class="row-content">
+        <div class="row-icon icon-coral"><svg viewBox="0 0 24 24"><path d="M4 4h16v12H4zM8 20h8M12 16v4"/></svg></div>
+        <div class="row-text"><div class="row-title">Newsletters</div><div class="row-desc">Archived editions — June 2025, January 2023, and more. Subscribe for current updates.</div></div>
+        <div class="row-arrow">›</div>
+      </div>
+    </a>
+
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">LTCCPAS.com</div>
+    <div class="footer-copy">© 2026 Insurance Review Services · Withbert W. Payne, CPA, CGMA · CA License No. 0E90257 · San Ramon, CA</div>
+    <div class="footer-links"><a href="#">Privacy</a><a href="#">Legal</a><a href="#">Contact</a></div>
+  </div>
+</footer>
+<script>var n=new Date();document.getElementById('td').textContent=n.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});</script>
+</body>
+</html>

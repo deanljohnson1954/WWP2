@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>California LTC Tax Considerations — LTCCPAS.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0c447c;--navy-mid:#185fa5;--navy-lt:#b5d4f4;--navy-pale:#e6f1fb;
+  --gold:#ba7517;--gold-mid:#ef9f27;--gold-lt:#fac775;--gold-pale:#faeeda;
+  --teal:#0f6e56;--teal-lt:#9fe1cb;--teal-pale:#e1f5ee;
+  --coral:#993c1d;--coral-pale:#faece7;
+  --slate:#1e3a5f;--body:#334155;--muted:#64748b;--light:#94a3b8;
+  --border:#b5d4f4;--border-lt:#dbeafe;--bg:#f0f5fb;--white:#ffffff;
+}
+body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--body);line-height:1.6}
+.topbar{background:var(--navy);padding:.45rem 2.5rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(181,212,244,.12)}
+.topbar span{font-size:.74rem;color:var(--navy-lt);letter-spacing:.04em}
+.topbar a{color:var(--gold-lt);text-decoration:none}
+.site-header{background:var(--navy);border-bottom:3px solid var(--gold);padding:0 2.5rem}
+.header-inner{max-width:1040px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:1.4rem 0;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:16px}
+.brand-badge{width:52px;height:52px;background:var(--gold);border-radius:13px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px rgba(186,117,23,.22);flex-shrink:0}
+.brand-badge svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.6}
+.brand-name{font-family:'Lora',serif;font-size:1.65rem;font-weight:700;color:#fff;line-height:1}
+.brand-sub{font-size:.72rem;color:var(--navy-lt);letter-spacing:.14em;text-transform:uppercase;margin-top:4px}
+.header-nav{display:flex;align-items:stretch}
+.header-nav a{display:flex;align-items:center;padding:0 1rem;font-size:.8rem;font-weight:500;color:var(--navy-lt);text-decoration:none;letter-spacing:.04em;border-bottom:3px solid transparent;transition:color .18s,border-color .18s;white-space:nowrap}
+.header-nav a:hover{color:#fff;border-bottom-color:var(--gold-lt)}
+.header-nav a.active{color:var(--gold-lt);border-bottom-color:var(--gold)}
+.page-hero{background:linear-gradient(135deg,#0c447c 0%,#185fa5 50%,#ba7517 100%);padding:3.5rem 2.5rem 4rem;border-bottom:4px solid var(--gold);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 8% 65%,rgba(186,117,23,.18) 0%,transparent 45%),radial-gradient(circle at 90% 20%,rgba(12,68,124,.2) 0%,transparent 40%)}
+.hero-inner{max-width:1040px;margin:0 auto;position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:30px;padding:4px 14px;font-size:.72rem;font-weight:600;color:#fff;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem}
+.page-hero h1{font-family:'Lora',serif;font-size:2.6rem;font-weight:700;color:#fff;line-height:1.15;margin-bottom:.85rem;max-width:780px}
+.page-hero p{font-size:1.05rem;color:rgba(255,255,255,.85);max-width:660px;line-height:1.65}
+.main-wrap{max-width:1040px;margin:0 auto;padding:2.5rem 2rem 5rem;display:grid;grid-template-columns:1fr 300px;gap:2rem;align-items:start}
+.main-col{min-width:0}
+.sec-head{display:flex;align-items:center;gap:12px;margin:2.5rem 0 1.25rem}
+.sec-head:first-of-type{margin-top:0}
+.sec-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sec-icon svg{width:18px;height:18px;fill:none;stroke-width:1.8}
+.sec-icon.gd{background:var(--gold-pale)} .sec-icon.gd svg{stroke:var(--gold)}
+.sec-icon.nv{background:var(--navy-pale)} .sec-icon.nv svg{stroke:var(--navy-mid)}
+.sec-icon.tl{background:var(--teal-pale)} .sec-icon.tl svg{stroke:var(--teal)}
+.sec-head h2{font-family:'Lora',serif;font-size:1.2rem;font-weight:700;color:var(--slate)}
+.sec-rule{flex:1;height:1px;background:linear-gradient(to right,var(--border),transparent)}
+
+/* STAT BAND */
+.stat-band{display:grid;grid-template-columns:repeat(3,1fr);gap:0;background:var(--navy);border-radius:16px;overflow:hidden;border:2px solid var(--navy-mid);box-shadow:0 6px 28px rgba(12,68,124,.15);margin-bottom:2rem}
+.stat-item{padding:1.5rem 1.25rem;text-align:center;border-right:1px solid rgba(181,212,244,.15)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:'Lora',serif;font-size:1.9rem;font-weight:700;color:var(--gold-lt);line-height:1;margin-bottom:.25rem}
+.stat-label{font-size:.75rem;font-weight:600;color:var(--navy-lt);line-height:1.3}
+
+/* TAX CALC CARD */
+.tax-card{background:var(--white);border:1.5px solid var(--border-lt);border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(12,68,124,.08);margin-bottom:1.75rem}
+.tax-card-head{padding:1.1rem 1.75rem;display:flex;align-items:center;gap:10px;border-bottom:3px solid transparent}
+.tax-card-head.gold{background:var(--gold-pale);border-bottom-color:var(--gold)}
+.tax-card-head.navy{background:var(--navy);border-bottom-color:var(--gold)}
+.tax-card-head.teal{background:var(--teal);border-bottom-color:var(--teal-lt)}
+.tax-card-head h3{font-family:'Lora',serif;font-size:1.05rem;font-weight:700}
+.tax-card-head.gold h3{color:var(--slate)}
+.tax-card-head.navy h3,.tax-card-head.teal h3{color:#fff}
+.tax-card-head svg{width:20px;height:20px;fill:none;stroke-width:1.8;flex-shrink:0}
+.tax-card-head.gold svg{stroke:var(--gold)}
+.tax-card-head.navy svg,.tax-card-head.teal svg{stroke:var(--gold-lt)}
+.tax-body{padding:1.5rem 1.75rem}
+.tax-body p{font-size:.92rem;color:var(--body);line-height:1.75;margin-bottom:1rem}
+
+/* CALC ROWS */
+.calc-row{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;border-bottom:1px solid var(--border-lt);gap:1rem}
+.calc-row:last-child{border-bottom:none}
+.calc-row.total{background:var(--navy);border-radius:10px;margin-top:.5rem}
+.calc-row.subtotal{background:var(--gold-pale);border-radius:8px;margin-top:.25rem}
+.calc-label{font-size:.88rem;color:var(--body);line-height:1.4}
+.calc-row.total .calc-label{color:#fff;font-weight:600}
+.calc-row.subtotal .calc-label{color:var(--slate);font-weight:600}
+.calc-amount{font-family:'Lora',serif;font-size:1.15rem;font-weight:700;text-align:right;flex-shrink:0}
+.calc-row.total .calc-amount{color:var(--gold-lt)}
+.calc-row.subtotal .calc-amount{color:var(--gold)}
+.calc-minus{color:var(--teal);font-weight:700;margin-right:4px}
+.calc-plus{color:var(--coral);font-weight:700;margin-right:4px}
+
+/* HIGHLIGHT BOX */
+.hl{background:var(--gold-pale);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:.85rem 1.1rem;margin:1rem 0;font-size:.88rem;color:var(--slate);line-height:1.6}
+.hl strong{color:var(--gold)}
+.hl.teal{background:var(--teal-pale);border-left-color:var(--teal)}
+.hl.teal strong{color:var(--teal)}
+.hl.navy{background:var(--navy-pale);border-left-color:var(--navy-mid)}
+.hl.navy strong{color:var(--navy)}
+
+/* SIDEBAR */
+.sidebar{display:flex;flex-direction:column;gap:16px}
+.side-card{background:var(--white);border:1.5px solid var(--border-lt);border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(12,68,124,.06)}
+.side-head{padding:.85rem 1.1rem;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border-lt)}
+.side-head.navy{background:var(--navy)}
+.side-head.gold{background:var(--gold-pale);border-bottom-color:var(--gold-lt)}
+.side-head.teal{background:var(--teal-pale);border-bottom-color:var(--teal-lt)}
+.side-head h3{font-size:.88rem;font-weight:700}
+.side-head.navy h3{color:#fff}
+.side-head.gold h3{color:var(--gold)}
+.side-head.teal h3{color:var(--teal)}
+.side-body{padding:1rem 1.1rem}
+.side-body p{font-size:.82rem;color:var(--body);line-height:1.6;margin-bottom:.75rem}
+.side-body p:last-child{margin-bottom:0}
+.check-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.check-list li{display:flex;align-items:flex-start;gap:8px;font-size:.82rem;color:var(--body);line-height:1.45}
+.check-list li::before{content:'✓';color:var(--teal);font-weight:700;flex-shrink:0;margin-top:1px}
+
+.cta-box{background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-radius:14px;padding:1.4rem 1.25rem;text-align:center;box-shadow:0 4px 18px rgba(12,68,124,.18)}
+.cta-box h3{font-family:'Lora',serif;font-size:1rem;font-weight:700;color:#fff;margin-bottom:.4rem;line-height:1.3}
+.cta-box p{font-size:.78rem;color:var(--navy-lt);margin-bottom:.85rem;line-height:1.5}
+.cta-btn{display:block;background:var(--gold);color:#fff;padding:.6rem 1.2rem;border-radius:20px;font-size:.82rem;font-weight:700;text-decoration:none;transition:background .18s}
+.cta-btn:hover{background:#854f0b}
+
+.disc{background:var(--navy-pale);border:1.5px solid var(--border);border-left:5px solid var(--navy-mid);border-radius:8px;padding:.85rem 1rem;font-size:.75rem;color:var(--muted);line-height:1.6;margin-top:1.5rem}
+
+.site-footer{background:var(--navy);border-top:4px solid var(--gold);padding:1.75rem 2.5rem}
+.footer-inner{max-width:1040px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-family:'Lora',serif;font-size:1rem;color:#fff;font-weight:700}
+.footer-copy{font-size:.75rem;color:var(--navy-lt)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:.75rem;color:var(--navy-lt);text-decoration:none}
+.footer-links a:hover{color:var(--gold-lt)}
+
+@media(max-width:900px){.main-wrap{grid-template-columns:1fr}.stat-band{grid-template-columns:1fr}}
+@media(max-width:640px){.page-hero h1{font-size:1.9rem}.header-nav{display:none}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>Insurance Review Services &nbsp;·&nbsp; <a href="LTCCPAS_INDEX.html">LTCCPAS.com</a> &nbsp;·&nbsp; Withbert W. Payne, CPA</span>
+  <span id="td"></span>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-badge"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7l7-4z"/></svg></div>
+      <div><div class="brand-name">LTCCPAS.com</div><div class="brand-sub">Insurance Review Services &nbsp;·&nbsp; Withbert W. Payne, CPA</div></div>
+    </div>
+    <nav class="header-nav">
+      <a href="LTCCPAS_INDEX.html">Home</a>
+      <a href="#">Education</a>
+      <a href="#" class="active">Tax</a>
+      <a href="LTC_Key_Statistics.html">Statistics</a>
+      <a href="SelfInsure.html">Self-Insure</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">California · Tax Planning</div>
+    <h1>California LTC Tax Considerations</h1>
+    <p>California and federal tax laws create powerful deduction opportunities for LTC insurance premiums — especially for C-Corporation owners, who may deduct up to 100% of the LTC care portion of the premium.</p>
+  </div>
+</div>
+
+<div class="main-wrap">
+<div class="main-col">
+
+  <!-- STAT BAND -->
+  <div class="stat-band" style="margin-bottom:2rem;">
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">C-Corp LTC premium deductibility</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">$30,253</div>
+      <div class="stat-label">Max combined CA + Federal tax savings (example)</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">8.84%</div>
+      <div class="stat-label">California corporate tax rate</div>
+    </div>
+  </div>
+
+  <!-- INDIVIDUAL DEDUCTIBILITY -->
+  <div class="sec-head">
+    <div class="sec-icon gd"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+    <h2>Individual &amp; Self-Employed Deductibility</h2>
+    <div class="sec-rule"></div>
+  </div>
+
+  <div class="tax-card">
+    <div class="tax-card-head gold">
+      <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <h3>Federal Tax Deduction — Individuals</h3>
+    </div>
+    <div class="tax-body">
+      <p>Premiums paid for a tax-qualified LTC insurance policy may be deductible as a medical expense on your federal return, subject to age-based limits set by the IRS. For 2026, the eligible premium limits per person are:</p>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:1rem 0">
+        <div style="background:var(--navy-pale);border:1.5px solid var(--border);border-radius:10px;padding:.85rem 1rem;text-align:center">
+          <div style="font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.3rem">Age 51–60</div>
+          <div style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:var(--navy)">$1,690/yr</div>
+        </div>
+        <div style="background:var(--navy-pale);border:1.5px solid var(--border);border-radius:10px;padding:.85rem 1rem;text-align:center">
+          <div style="font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.3rem">Age 61–70</div>
+          <div style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:var(--navy)">$4,510/yr</div>
+        </div>
+        <div style="background:var(--gold-pale);border:2px solid var(--gold-lt);border-radius:10px;padding:.85rem 1rem;text-align:center">
+          <div style="font-size:.72rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.3rem">Age 71+</div>
+          <div style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:var(--gold)">$6,020/yr</div>
+        </div>
+        <div style="background:var(--navy-pale);border:1.5px solid var(--border);border-radius:10px;padding:.85rem 1rem;text-align:center">
+          <div style="font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.3rem">Age 41–50</div>
+          <div style="font-family:'Lora',serif;font-size:1.25rem;font-weight:700;color:var(--navy)">$850/yr</div>
+        </div>
+      </div>
+      <div class="hl navy">Deductions are subject to the 7.5% AGI floor for medical expenses. Self-employed individuals may deduct 100% of eligible LTC premiums above the line — consult your CPA for specifics.</div>
+    </div>
+  </div>
+
+  <!-- C-CORP DEDUCTIBILITY -->
+  <div class="sec-head">
+    <div class="sec-icon nv"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 8h8M8 16h5"/></svg></div>
+    <h2>C-Corporation — Maximum Tax Advantage</h2>
+    <div class="sec-rule"></div>
+  </div>
+
+  <div class="tax-card">
+    <div class="tax-card-head navy">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M8 8h8M8 16h5"/></svg>
+      <h3>C-Corp Owner — Two Layers of Tax Savings</h3>
+    </div>
+    <div class="tax-body">
+      <p>For a C-Corporation owner, the LTC care portion of the premium qualifies for a <strong>100% business deduction</strong> — with no age-based limits. This creates two distinct layers of real tax savings:</p>
+
+      <div style="background:var(--bg);border-radius:12px;overflow:hidden;border:1.5px solid var(--border-lt);margin:1rem 0">
+        <div style="background:var(--slate);padding:.6rem 1rem;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--navy-lt)">Example — California C-Corp · LTC Care Premium: $101,397</div>
+        <div class="calc-row">
+          <div class="calc-label">Federal corporate tax rate (21%)<br><span style="font-size:.75rem;color:var(--muted)">$101,397 × 21%</span></div>
+          <div class="calc-amount" style="color:var(--teal)"><span class="calc-minus">−</span>$21,293</div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-label">California corporate tax rate (8.84%)<br><span style="font-size:.75rem;color:var(--muted)">$101,397 × 8.84%</span></div>
+          <div class="calc-amount" style="color:var(--teal)"><span class="calc-minus">−</span>$8,960</div>
+        </div>
+        <div class="calc-row subtotal">
+          <div class="calc-label">Combined CA + Federal tax savings</div>
+          <div class="calc-amount">$30,253</div>
+        </div>
+      </div>
+
+      <div class="hl">
+        <strong>The result:</strong> A California C-Corp owner may reduce their true net LTC cost by as much as <strong>$30,253</strong> through combined federal and state tax deductions on the care portion of the premium alone.
+      </div>
+
+      <div style="background:var(--coral-pale);border:1.5px solid rgba(153,60,29,.2);border-radius:8px;padding:.75rem 1rem;font-size:.82rem;color:var(--coral);margin-top:.75rem;display:flex;gap:8px;align-items:flex-start">
+        <span style="flex-shrink:0;margin-top:1px;">⚠</span>
+        <div><strong>Important:</strong> If the C-Corporation has no taxable income, there will be no tax benefit. Tax savings are only realized to the extent the corporation has taxable income in the year of the deduction. Consult your CPA or tax advisor.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL CASH FLOW -->
+  <div class="sec-head">
+    <div class="sec-icon tl"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+    <h2>Full Cash Flow Impact — C-Corp Example</h2>
+    <div class="sec-rule"></div>
+  </div>
+
+  <div class="tax-card">
+    <div class="tax-card-head teal">
+      <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <h3>True Net Cost After All Offsets — Age 50 Couple</h3>
+    </div>
+    <div class="tax-body">
+      <div style="background:var(--bg);border-radius:12px;overflow:hidden;border:1.5px solid var(--border-lt)">
+        <div style="background:var(--teal);padding:.6rem 1rem;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--teal-lt)">Single Premium — Hybrid LTC Policy</div>
+        <div class="calc-row">
+          <div class="calc-label" style="font-weight:700;">Single Premium Paid</div>
+          <div class="calc-amount" style="color:var(--slate)">$169,917</div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-label">Less: Immediate Cash Surrender Value<br><span style="font-size:.75rem;color:var(--muted)">Accessible from day one</span></div>
+          <div class="calc-amount" style="color:var(--teal)"><span class="calc-minus">−</span>$71,628</div>
+        </div>
+        <div class="calc-row subtotal">
+          <div class="calc-label">Net Risk Capital<br><span style="font-size:.75rem;color:var(--muted)">~4 months of San Francisco nursing home care</span></div>
+          <div class="calc-amount">$98,289</div>
+        </div>
+        <div class="calc-row">
+          <div class="calc-label">Less: C-Corp Tax Savings (up to)<br><span style="font-size:.75rem;color:var(--muted)">Federal 21% + CA 8.84% on $101,397 LTC portion</span></div>
+          <div class="calc-amount" style="color:var(--teal)"><span class="calc-minus">−</span>$30,253</div>
+        </div>
+        <div class="calc-row total">
+          <div class="calc-label">True Net Cost — California C-Corp</div>
+          <div class="calc-amount">~$68,036</div>
+        </div>
+      </div>
+      <div class="hl teal" style="margin-top:1rem">
+        <strong>The bottom line:</strong> A California C-Corp owner may fund comprehensive, lifetime LTC coverage for a couple for a true net cost of approximately <strong>$68,036</strong> — while retaining a $300,000+ death benefit if care is never needed.
+      </div>
+    </div>
+  </div>
+
+  <!-- CA PARTNERSHIP -->
+  <div class="sec-head">
+    <div class="sec-icon gd"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7l7-4z"/></svg></div>
+    <h2>California State Partnership Program</h2>
+    <div class="sec-rule"></div>
+  </div>
+
+  <div class="tax-card">
+    <div class="tax-card-head gold">
+      <svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7l7-4z"/></svg>
+      <h3>Protect Assets — Qualify for Medi-Cal Sooner</h3>
+    </div>
+    <div class="tax-body">
+      <p>California participates in the <strong>Long-Term Care Partnership Program</strong>, which allows policyholders with a qualifying LTC policy to protect assets equal to the benefits paid out by the policy — dollar for dollar — when applying for Medi-Cal (California's Medicaid program).</p>
+      <div class="hl">
+        <strong>Example:</strong> If your LTC policy pays out $200,000 in benefits, you can protect $200,000 in assets and still qualify for Medi-Cal — without spending those assets down. This effectively gives every dollar of LTC coverage <strong>double duty</strong>: it pays for care AND shields your estate.
+      </div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:.75rem">
+        <li style="display:flex;align-items:flex-start;gap:8px;font-size:.85rem;color:var(--body)"><span style="color:var(--teal);font-weight:700;flex-shrink:0">✓</span>Policy must be California Partnership-certified at time of purchase</li>
+        <li style="display:flex;align-items:flex-start;gap:8px;font-size:.85rem;color:var(--body)"><span style="color:var(--teal);font-weight:700;flex-shrink:0">✓</span>Dollar-for-dollar asset protection matching benefits paid</li>
+        <li style="display:flex;align-items:flex-start;gap:8px;font-size:.85rem;color:var(--body)"><span style="color:var(--teal);font-weight:700;flex-shrink:0">✓</span>Reciprocal — protection recognized in other participating states</li>
+        <li style="display:flex;align-items:flex-start;gap:8px;font-size:.85rem;color:var(--body)"><span style="color:var(--teal);font-weight:700;flex-shrink:0">✓</span>Inflation protection required for ages under 76 at purchase</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="disc">
+    <strong>Tax disclaimer:</strong> This page is for educational purposes only and does not constitute tax, legal, or financial advice. LTC premium deductibility is subject to IRS guidelines and California FTB rules, which may change. Individual and C-Corporation tax situations vary. Always consult a qualified CPA or tax advisor before making decisions based on tax considerations. — Withbert W. Payne, CPA, CGMA · CA License No. 0E90257
+  </div>
+
+</div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="side-card">
+    <div class="side-head navy"><h3 style="color:#fff">Key Tax Facts — 2026</h3></div>
+    <div class="side-body">
+      <ul class="check-list">
+        <li>C-Corp: 100% deduction on LTC care portion — no age limits</li>
+        <li>Individual: Age-based eligible premium limits (up to $6,020/yr age 71+)</li>
+        <li>Self-employed: 100% above-the-line deduction on eligible amounts</li>
+        <li>California follows federal qualified LTC policy definitions</li>
+        <li>Partnership Program: dollar-for-dollar Medi-Cal asset protection</li>
+        <li>No tax benefit if C-Corp has no taxable income</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="side-card">
+    <div class="side-head gold"><h3>C-Corp Example Summary</h3></div>
+    <div class="side-body">
+      <p style="font-size:.78rem;color:var(--muted);margin-bottom:.75rem">Age 50 couple · Single premium policy</p>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="display:flex;justify-content:space-between;font-size:.82rem;padding:.4rem 0;border-bottom:1px solid var(--border-lt)"><span style="color:var(--muted)">Premium paid</span><span style="font-weight:700;color:var(--slate)">$169,917</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:.82rem;padding:.4rem 0;border-bottom:1px solid var(--border-lt)"><span style="color:var(--muted)">Less CSV</span><span style="font-weight:700;color:var(--teal)">−$71,628</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:.82rem;padding:.4rem 0;border-bottom:1px solid var(--border-lt)"><span style="color:var(--muted)">Net risk capital</span><span style="font-weight:700;color:var(--slate)">$98,289</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:.82rem;padding:.4rem 0;border-bottom:1px solid var(--border-lt)"><span style="color:var(--muted)">Less C-Corp tax</span><span style="font-weight:700;color:var(--teal)">−$30,253</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:.85rem;padding:.5rem 0;background:var(--gold-pale);border-radius:6px;padding:.5rem .75rem;margin-top:.25rem"><span style="color:var(--gold);font-weight:700">True net cost</span><span style="font-weight:700;color:var(--gold)">~$68,036</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-box">
+    <h3>Get a Tax Analysis for Your Situation</h3>
+    <p>Withbert W. Payne, CPA will model the exact federal and California tax impact of an LTC policy for your specific business structure.</p>
+    <a href="mailto:withbert.payne@insurance-review-services.com" class="cta-btn">Request a Tax Analysis</a>
+    <p style="font-size:.68rem;color:rgba(181,212,244,.5);margin-top:.6rem;margin-bottom:0">(925) 708-6501 · CA Lic. No. 0E90257</p>
+  </div>
+</aside>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">LTCCPAS.com</div>
+    <div class="footer-copy">© 2026 Insurance Review Services · Withbert W. Payne, CPA, CGMA · CA License No. 0E90257 · San Ramon, CA</div>
+    <div class="footer-links"><a href="#">Privacy Policy</a><a href="#">Legal Terms</a><a href="LTCCPAS_INDEX.html">Home</a></div>
+  </div>
+</footer>
+<script>var n=new Date();document.getElementById('td').textContent=n.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});</script>
+</body>
+</html>

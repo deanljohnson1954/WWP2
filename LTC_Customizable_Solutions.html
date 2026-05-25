@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customizable Solutions — LTCCPAS.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#0c447c;--navy-mid:#185fa5;--navy-lt:#b5d4f4;--navy-pale:#e6f1fb;
+  --gold:#ba7517;--gold-mid:#ef9f27;--gold-lt:#fac775;--gold-pale:#faeeda;
+  --teal:#0f6e56;--teal-lt:#9fe1cb;--teal-pale:#e1f5ee;
+  --coral:#993c1d;--coral-pale:#faece7;
+  --slate:#1e3a5f;--body:#334155;--muted:#64748b;--light:#94a3b8;
+  --border:#b5d4f4;--border-lt:#dbeafe;--bg:#f0f5fb;--white:#ffffff;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Source Sans 3',sans-serif;background:var(--bg);color:var(--body);line-height:1.6}
+
+/* TOPBAR */
+.topbar{background:var(--navy);padding:.45rem 2.5rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(181,212,244,.12)}
+.topbar span{font-size:.74rem;color:var(--navy-lt);letter-spacing:.04em}
+.topbar a{color:var(--gold-lt);text-decoration:none}
+
+/* HEADER */
+.site-header{background:var(--navy);border-bottom:3px solid var(--gold);padding:0 2.5rem}
+.header-inner{max-width:1140px;margin:0 auto;display:flex;align-items:stretch;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:16px;padding:1.4rem 0}
+.brand-badge{width:52px;height:52px;background:var(--gold);border-radius:13px;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px rgba(186,117,23,.22);flex-shrink:0}
+.brand-badge svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.6}
+.brand-name{font-family:'Lora',serif;font-size:1.65rem;font-weight:700;color:#fff;line-height:1}
+.brand-sub{font-size:.72rem;color:var(--navy-lt);letter-spacing:.14em;text-transform:uppercase;margin-top:4px}
+.header-nav{display:flex;align-items:stretch}
+.header-nav a{display:flex;align-items:center;padding:0 1rem;font-size:.8rem;font-weight:500;color:var(--navy-lt);text-decoration:none;letter-spacing:.04em;border-bottom:3px solid transparent;transition:color .18s,border-color .18s;white-space:nowrap}
+.header-nav a:hover{color:#fff;border-bottom-color:var(--gold-lt)}
+.header-nav a.active{color:var(--gold-lt);border-bottom-color:var(--gold)}
+
+/* HERO */
+.page-hero{background:linear-gradient(135deg,#0c447c 0%,#185fa5 50%,#0f6e56 100%);padding:3.5rem 2.5rem 4rem;border-bottom:4px solid var(--gold);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 8% 65%,rgba(186,117,23,.14) 0%,transparent 45%),radial-gradient(circle at 90% 20%,rgba(15,110,86,.13) 0%,transparent 40%)}
+.hero-inner{max-width:1140px;margin:0 auto;position:relative;z-index:1}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(186,117,23,.2);border:1px solid rgba(250,199,117,.35);border-radius:30px;padding:4px 14px;font-size:.72rem;font-weight:600;color:var(--gold-lt);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem}
+.page-hero h1{font-family:'Lora',serif;font-size:2.6rem;font-weight:700;color:#fff;line-height:1.15;margin-bottom:.85rem;max-width:780px}
+.page-hero p{font-size:1.05rem;color:var(--navy-lt);max-width:640px;line-height:1.65}
+
+/* MAIN */
+.main-wrap{max-width:1000px;margin:0 auto;padding:3rem 2rem 5rem}
+
+/* INTRO */
+.intro-band{
+  background:var(--white);
+  border:1.5px solid var(--border-lt);
+  border-left:6px solid var(--navy-mid);
+  border-radius:14px;
+  padding:1.4rem 1.75rem;
+  margin-bottom:2.5rem;
+  font-size:1rem;
+  color:var(--slate);
+  line-height:1.7;
+  box-shadow:0 2px 12px rgba(12,68,124,.06);
+}
+.intro-band strong{color:var(--navy);}
+
+/* SOLUTION CARDS — full width stacked */
+.sol-card{
+  background:var(--white);
+  border:1.5px solid var(--border-lt);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 4px 24px rgba(12,68,124,.08);
+  margin-bottom:1.5rem;
+  transition:box-shadow .2s, transform .2s;
+}
+.sol-card:hover{box-shadow:0 8px 36px rgba(12,68,124,.14);transform:translateY(-2px)}
+
+/* coloured left accent bar */
+.sol-inner{display:flex;align-items:stretch}
+.sol-bar{width:8px;flex-shrink:0}
+.sol-bar.navy{background:linear-gradient(180deg,var(--navy),var(--navy-mid))}
+.sol-bar.gold{background:linear-gradient(180deg,var(--gold),var(--gold-mid))}
+.sol-bar.teal{background:linear-gradient(180deg,var(--teal),#1d9e75)}
+.sol-bar.coral{background:linear-gradient(180deg,var(--coral),#d85a30)}
+
+.sol-content{flex:1;padding:1.6rem 1.75rem;display:flex;align-items:flex-start;gap:1.25rem}
+
+/* number badge */
+.sol-num{
+  font-family:'Lora',serif;
+  font-size:2.2rem;font-weight:700;line-height:1;
+  flex-shrink:0;width:48px;text-align:center;
+  margin-top:2px;
+}
+.sol-bar.navy ~ .sol-content .sol-num{color:var(--navy)}
+.sol-card:nth-child(2) .sol-num{color:var(--gold)}
+.sol-card:nth-child(3) .sol-num{color:var(--teal)}
+.sol-card:nth-child(4) .sol-num{color:var(--navy)}
+.sol-card:nth-child(5) .sol-num{color:var(--gold)}
+.sol-card:nth-child(6) .sol-num{color:var(--teal)}
+.sol-card:nth-child(7) .sol-num{color:var(--coral)}
+.sol-card:nth-child(8) .sol-num{color:var(--navy)}
+
+.sol-icon{
+  width:44px;height:44px;border-radius:11px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:2px;
+}
+.sol-icon svg{width:22px;height:22px;fill:none;stroke-width:1.7}
+
+.sol-text{flex:1}
+.sol-title{font-family:'Lora',serif;font-size:1.15rem;font-weight:700;color:var(--slate);margin-bottom:.45rem;line-height:1.3}
+.sol-desc{font-size:.92rem;color:var(--body);line-height:1.75}
+.sol-desc strong{color:var(--slate)}
+
+/* inline highlight within card */
+.sol-hl{
+  background:var(--navy-pale);
+  border-left:4px solid var(--navy-mid);
+  border-radius:0 8px 8px 0;
+  padding:.65rem 1rem;
+  margin-top:.75rem;
+  font-size:.85rem;color:var(--slate);line-height:1.6;
+}
+.sol-hl.gold{background:var(--gold-pale);border-left-color:var(--gold)}
+.sol-hl.teal{background:var(--teal-pale);border-left-color:var(--teal)}
+
+/* tag pill */
+.sol-tag{
+  display:inline-block;
+  font-size:.68rem;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  padding:3px 10px;border-radius:20px;
+  margin-bottom:.5rem;
+}
+.tag-navy{background:var(--navy-pale);color:var(--navy)}
+.tag-gold{background:var(--gold-pale);color:var(--gold)}
+.tag-teal{background:var(--teal-pale);color:var(--teal)}
+.tag-coral{background:var(--coral-pale);color:var(--coral)}
+
+/* CTA */
+.cta-banner{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:20px;padding:2rem 2.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;box-shadow:0 6px 28px rgba(12,68,124,.2);border:2px solid rgba(181,212,244,.15);margin-top:.5rem}
+.cta-banner h3{font-family:'Lora',serif;font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:.35rem}
+.cta-banner p{font-size:.85rem;color:var(--navy-lt);line-height:1.5}
+.cta-btn{background:var(--gold);color:#fff;padding:.7rem 1.75rem;border-radius:30px;font-size:.88rem;font-weight:700;text-decoration:none;letter-spacing:.04em;white-space:nowrap;transition:background .18s;flex-shrink:0}
+.cta-btn:hover{background:#854f0b}
+
+/* FOOTER */
+.site-footer{background:var(--navy);border-top:4px solid var(--gold);padding:1.75rem 2.5rem}
+.footer-inner{max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-family:'Lora',serif;font-size:1rem;color:#fff;font-weight:700}
+.footer-copy{font-size:.75rem;color:var(--navy-lt)}
+.footer-links{display:flex;gap:1.5rem}
+.footer-links a{font-size:.75rem;color:var(--navy-lt);text-decoration:none}
+.footer-links a:hover{color:var(--gold-lt)}
+
+@media(max-width:680px){
+  .page-hero h1{font-size:1.9rem}
+  .sol-content{flex-direction:column;gap:.75rem}
+  .sol-num{width:auto;font-size:1.6rem}
+  .header-nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>Insurance Review Services &nbsp;·&nbsp; <a href="LTCCPAS_INDEX.html">LTCCPAS.com</a> &nbsp;·&nbsp; Withbert W. Payne, CPA</span>
+  <span id="td"></span>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-badge">
+        <svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7l7-4z"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">LTCCPAS.com</div>
+        <div class="brand-sub">Insurance Review Services &nbsp;·&nbsp; Withbert W. Payne, CPA</div>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <a href="LTCCPAS_INDEX.html">Home</a>
+      <a href="#">Education</a>
+      <a href="#" class="active">Solutions</a>
+      <a href="LTC_Key_Statistics.html">Statistics</a>
+      <a href="What_Initiates_a_Long-Term_Care_Claim_.html">Claim Triggers</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">LTC Planning</div>
+    <h1>Customizable Solutions</h1>
+    <p>Long-term care planning is not one-size-fits-all. These eight flexible options let you build a strategy precisely matched to your income, assets, family situation, and goals.</p>
+  </div>
+</div>
+
+<main class="main-wrap">
+
+  <div class="intro-band">
+    Your long-term care plan can take advantage of a wide range of <strong>customizable funding and coverage options</strong> — from whole life and annuity-based solutions to qualified retirement dollars, joint coverage, and flexible payment structures. Each option below can be tailored to your specific needs.
+  </div>
+
+  <!-- 1 -->
+  <div class="sol-card">
+    <div class="sol-inner">
+      <div class="sol-bar navy"></div>
+      <div class="sol-content">
+        <div class="sol-num">01</div>
+        <div class="sol-icon" style="background:var(--navy-pale)">
+          <svg viewBox="0 0 24 24" style="stroke:var(--navy-mid)"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7l7-4z"/></svg>
+        </div>
+        <div class="sol-text">
+          <span class="sol-tag tag-navy">Policy Structure</span>
+          <div class="sol-title">Whole Life &amp; Annuity-Based Options</div>
+          <div class="sol-desc">Available for applicants <strong>ages 35 to 80</strong>, whole life insurance and annuity-based LTC solutions protect your income, your loved ones, and your legacy — while providing guaranteed long-term care coverage that cannot be cancelled as long as premiums are paid.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="sol-card">
+    <div class="sol-inner">
+      <div class="sol-bar gold"></div>
+      <div class="sol-content">
+        <div class="sol-num" style="color:var(--gold)">02</div>
+        <div class="sol-icon" style="background:var(--gold-pale)">
+          <svg viewBox="0 0 24 24" style="stroke:var(--gold)"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="sol-text">
+          <span class="sol-tag tag-gold">Benefit Flexibility</span>
+          <div class="sol-title">Claims Payment Flexibility — Cash Indemnity</div>
+          <div class="sol-desc">When a client wants care delivered at home by an informal caregiver — and that choice is aligned with their plan of care — a <strong>Cash Indemnity Benefit</strong> can be paid directly to support that caregiver. This gives families the freedom to choose who provides care, not just where.</div>
+          <div class="sol-hl gold">The LTC pool can be accessed at up to 75% of the monthly benefit limit — paid directly to offset the real costs of informal home care.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="sol-card">
+    <div class="sol-inner">
+      <div class="sol-bar teal"></div>
+      <div class="sol-content">
+        <div class="sol-num" style="color:var(--teal)">03</div>
+        <div class="sol-icon" style="background:var(--teal-pale)">
+          <svg viewBox="0 0 24 24" style="stroke:var(--teal)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="sol-text">
+          <span class="sol-tag tag-teal">Coverage Duration</span>
+          <div class="sol-title">Lifetime Protection</div>
+          <div class="sol-desc">Coverage that never runs out — <strong>lifetime protection</strong> for qualifying long-term care needs eliminates financial worry about what may come or how long care may last. Whether a care event lasts months, years, or decades, your benefits remain intact.</div>
+          <div class="sol-hl teal">1 in 5 people will need care for 5 or more years. Lifetime coverage ensures you are never left without protection, regardless of how long care is needed.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="sol-card">
+    <div class="sol-inner">
+      <div class="sol-bar navy"></div>
+      <div class="sol-content">
+        <div class="sol-num" style="color:var(--navy)">04</div>
+        <div class="sol-icon" style="background:var(--navy-pale)">
+          <svg viewBox="0 0 24 24" style="stroke:var(--navy-mid)"><path d="M9 12l2 2 4-4"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+        </div>
+        <div class="sol-text">
+          <span class="sol-tag tag-navy">Cost Certainty</span>
+          <div class="sol-title">Guaranteed Benefits &amp; Guaranteed Costs</div>
+          <div class="sol-desc">Premiums that <strong>will not increase</strong>. Benefits that <strong>will not decrease — ever</strong>. This is the financial certainty that standalone LTC policies have often failed to deliver. Your coverage amount and your cost are both locked in at the time of issue.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="sol-card">
+    <div class="sol-inner">
+      <div class="sol-bar gold"></div>
+      <div class="sol-content">
+        <div class="sol-num" style="color:var(--gold)">05</div>
+        <div class="sol-icon" style="background:var(--gold-pale)">
+          <svg viewBox="0 0 24 24" style="stroke:var(--gold)"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+        <div class="sol-text">
+          <span class="sol-tag tag-gold">Payment Structure</span>
+          <div class="sol-title">Flexible Funding — Lump Sum or Over Time</div>
+          <div class="sol-desc">Pay in a <strong>single lump sum</strong> for immediate full coverage — ideal for repositioning an existing asset such as a CD, savings account, or annuity. Or spread payments <strong>over time</strong> with a structured premium schedule that fits your cash flow. You choose the structure that works for your financial plan.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="sol-card">
+    <div class="sol-inner">
+      <div class="sol-bar teal"></div>
+      <div class="sol-content">
+        <div class="sol-num" style="color:var(--teal)">06</div>
+        <div class="sol-icon" style="background:var(--teal-pale)">
+          <svg viewBox="0 0 24 24" style="stroke:var(--teal)"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div class="sol-text">
+          <span class="sol-tag tag-teal">Tax Advantage</span>
+          <div class="sol-title">Qualified Dollars Count — 401(k), IRA &amp; Annuity Funding</div>
+          <div class="sol-desc">Clients can fund their LTC protection using <strong>pre-tax dollars from traditional 401(k)s, IRAs, or other qualified retirement accounts</strong> — making every dollar work harder. Non-qualified annuities can also be used, providing a tax-efficient way to reposition existing assets into guaranteed LTC protection.</div>
+          <div class="sol-hl teal">Using qualified retirement funds to pay premiums may reduce your taxable income in the year of transfer — consult your CPA for specifics.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="sol-card">
+    <div class="sol-inner">
+      <div class="sol-bar coral"></div>
+      <div class="sol-content">
+        <div class="sol-num" style="color:var(--coral)">07</div>
+        <div class="sol-icon" style="background:var(--coral-pale)">
+          <svg viewBox="0 0 24 24" style="stroke:var(--coral)"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="sol-text">
+          <span class="sol-tag tag-coral">Couple Strategy</span>
+          <div class="sol-title">Joint Coverage — One Policy, Shared Benefits</div>
+          <div class="sol-desc">A single policy can cover <strong>both spouses or partners</strong> under a shared benefit structure — often at a lower combined cost than two separate policies. If one partner exhausts their individual benefit, the shared pool may provide additional coverage, protecting both individuals under one streamlined plan.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="sol-card">
+    <div class="sol-inner">
+      <div class="sol-bar navy"></div>
+      <div class="sol-content">
+        <div class="sol-num" style="color:var(--navy)">08</div>
+        <div class="sol-icon" style="background:var(--navy-pale)">
+          <svg viewBox="0 0 24 24" style="stroke:var(--navy-mid)"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><path d="M12 14v7"/></svg>
+        </div>
+        <div class="sol-text">
+          <span class="sol-tag tag-navy">Support Service</span>
+          <div class="sol-title">Caregiver Consultant — Included with Cash Indemnity</div>
+          <div class="sol-desc">While receiving a Cash Indemnity Benefit, informal caregivers have access to a <strong>dedicated caregiver consultant</strong> who provides insights, education, and emotional support through optional virtual or in-person monthly touchpoints. This resource helps ease the physical and emotional burdens of caregiving — protecting both the person receiving care and the family member providing it.</div>
+          <div class="sol-hl">The caregiver consultant is not an add-on — it is included as part of the Cash Indemnity benefit, at no additional cost.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-banner">
+    <div>
+      <h3>Find the Right Combination for Your Situation</h3>
+      <p>Withbert W. Payne, CPA will help you identify which of these options — or which combination — best fits your age, assets, income, and family goals.</p>
+    </div>
+    <a href="mailto:withbert.payne@insurance-review-services.com" class="cta-btn">Request a Consultation</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">LTCCPAS.com</div>
+    <div class="footer-copy">2026 Insurance Review Services · Withbert W. Payne, CPA, CGMA · CA License No. 0E90257 · San Ramon, CA</div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Legal Terms</a>
+      <a href="LTCCPAS_INDEX.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+var n=new Date();
+document.getElementById('td').textContent=n.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+</script>
+</body>
+</html>

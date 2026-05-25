@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Long-Term Care Benefits — LTCCPAS.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy:      #0c447c;
+    --navy-mid:  #185fa5;
+    --navy-lt:   #b5d4f4;
+    --navy-pale: #e6f1fb;
+    --gold:      #ba7517;
+    --gold-mid:  #ef9f27;
+    --gold-lt:   #fac775;
+    --gold-pale: #faeeda;
+    --teal:      #0f6e56;
+    --teal-lt:   #9fe1cb;
+    --teal-pale: #e1f5ee;
+    --coral:     #993c1d;
+    --coral-pale:#faece7;
+    --slate:     #1e3a5f;
+    --body:      #334155;
+    --muted:     #64748b;
+    --light:     #94a3b8;
+    --border:    #b5d4f4;
+    --border-lt: #dbeafe;
+    --bg:        #f0f5fb;
+    --white:     #ffffff;
+    --r:         14px;
+    --r-sm:      8px;
+    --r-lg:      20px;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Source Sans 3', sans-serif; background: var(--bg); color: var(--body); min-height: 100vh; line-height: 1.6; }
+
+  /* TOPBAR */
+  .topbar { background: var(--navy); padding: 0.45rem 2.5rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(181,212,244,0.12); }
+  .topbar span { font-size: 0.74rem; color: var(--navy-lt); letter-spacing: 0.04em; }
+  .topbar a { color: var(--gold-lt); text-decoration: none; }
+
+  /* HEADER */
+  .site-header { background: var(--navy); border-bottom: 3px solid var(--gold); padding: 0 2.5rem; }
+  .header-inner { max-width: 1140px; margin: 0 auto; display: flex; align-items: stretch; justify-content: space-between; }
+  .brand { display: flex; align-items: center; gap: 16px; padding: 1.4rem 0; }
+  .brand-badge { width: 52px; height: 52px; background: var(--gold); border-radius: 13px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 4px rgba(186,117,23,0.22); flex-shrink: 0; }
+  .brand-badge svg { width: 26px; height: 26px; stroke: #fff; fill: none; stroke-width: 1.6; }
+  .brand-name { font-family: 'Lora', serif; font-size: 1.65rem; font-weight: 700; color: #fff; line-height: 1; }
+  .brand-sub { font-size: 0.72rem; color: var(--navy-lt); letter-spacing: 0.14em; text-transform: uppercase; margin-top: 4px; }
+  .header-nav { display: flex; align-items: stretch; }
+  .header-nav a { display: flex; align-items: center; padding: 0 1rem; font-size: 0.8rem; font-weight: 500; color: var(--navy-lt); text-decoration: none; letter-spacing: 0.04em; border-bottom: 3px solid transparent; transition: color 0.18s, border-color 0.18s; white-space: nowrap; }
+  .header-nav a:hover { color: #fff; border-bottom-color: var(--gold-lt); }
+  .header-nav a.active { color: var(--gold-lt); border-bottom-color: var(--gold); }
+
+  /* HERO */
+  .page-hero { background: linear-gradient(135deg, #0c447c 0%, #185fa5 55%, #0f6e56 100%); padding: 3rem 2.5rem 3.5rem; border-bottom: 4px solid var(--gold); position: relative; overflow: hidden; }
+  .page-hero::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(circle at 10% 60%, rgba(186,117,23,0.13) 0%, transparent 48%), radial-gradient(circle at 88% 15%, rgba(15,110,86,0.14) 0%, transparent 42%); }
+  .hero-inner { max-width: 1140px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(186,117,23,0.2); border: 1px solid rgba(250,199,117,0.35); border-radius: 30px; padding: 4px 14px; font-size: 0.72rem; font-weight: 600; color: var(--gold-lt); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1rem; }
+  .page-hero h1 { font-family: 'Lora', serif; font-size: 2.4rem; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 0.75rem; max-width: 720px; }
+  .page-hero p { font-size: 1.05rem; color: var(--navy-lt); max-width: 650px; line-height: 1.65; }
+
+  /* MAIN */
+  .main-wrap { max-width: 1140px; margin: 0 auto; padding: 2.5rem 2rem 5rem; }
+
+  /* INTRO COUNT BAND */
+  .count-band { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: var(--navy); border-radius: var(--r-lg); overflow: hidden; border: 2px solid var(--navy-mid); box-shadow: 0 8px 32px rgba(12,68,124,0.18); margin-bottom: 2.5rem; }
+  .count-item { padding: 1.5rem 1.25rem; text-align: center; border-right: 1px solid rgba(181,212,244,0.15); }
+  .count-item:last-child { border-right: none; }
+  .count-num { font-family: 'Lora', serif; font-size: 2.2rem; font-weight: 700; color: var(--gold-lt); line-height: 1; margin-bottom: 0.3rem; }
+  .count-label { font-size: 0.78rem; font-weight: 600; color: var(--navy-lt); line-height: 1.3; }
+
+  /* SECTION HEAD */
+  .sec-head { display: flex; align-items: center; gap: 12px; margin: 0 0 1.4rem; }
+  .sec-icon { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .sec-icon svg { width: 18px; height: 18px; fill: none; stroke-width: 1.8; }
+  .sec-icon.navy { background: var(--navy-pale); } .sec-icon.navy svg { stroke: var(--navy-mid); }
+  .sec-icon.gold { background: var(--gold-pale); } .sec-icon.gold svg { stroke: var(--gold); }
+  .sec-icon.teal { background: var(--teal-pale); } .sec-icon.teal svg { stroke: var(--teal); }
+  .sec-head h2 { font-family: 'Lora', serif; font-size: 1.2rem; font-weight: 600; color: var(--slate); }
+  .sec-rule { flex: 1; height: 1px; background: linear-gradient(to right, var(--border), transparent); }
+
+  /* BENEFITS GRID — 4 columns */
+  .benefits-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 2rem; }
+
+  /* BENEFIT CARD */
+  .b-card {
+    background: var(--white);
+    border: 1.5px solid var(--border-lt);
+    border-radius: var(--r);
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(12,68,124,0.06);
+    transition: box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+  .b-card:hover { box-shadow: 0 8px 28px rgba(12,68,124,0.13); transform: translateY(-3px); }
+
+  /* coloured top stripe + number badge */
+  .b-card-top {
+    position: relative;
+    padding: 1.1rem 1.1rem 0.75rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .b-card.c-navy .b-card-top  { background: var(--navy-pale); border-bottom: 2px solid var(--navy-lt); }
+  .b-card.c-gold .b-card-top  { background: var(--gold-pale);  border-bottom: 2px solid var(--gold-lt); }
+  .b-card.c-teal .b-card-top  { background: var(--teal-pale);  border-bottom: 2px solid var(--teal-lt); }
+  .b-card.c-coral .b-card-top { background: var(--coral-pale); border-bottom: 2px solid #f0997b; }
+
+  .b-num {
+    font-family: 'Lora', serif;
+    font-size: 1.6rem; font-weight: 700; line-height: 1;
+    flex-shrink: 0;
+    width: 36px;
+  }
+  .b-card.c-navy  .b-num { color: var(--navy); }
+  .b-card.c-gold  .b-num { color: var(--gold); }
+  .b-card.c-teal  .b-num { color: var(--teal); }
+  .b-card.c-coral .b-num { color: var(--coral); }
+
+  .b-icon { width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .b-icon svg { width: 16px; height: 16px; fill: none; stroke-width: 1.9; }
+  .b-card.c-navy  .b-icon { background: rgba(12,68,124,0.12); } .b-card.c-navy  .b-icon svg { stroke: var(--navy); }
+  .b-card.c-gold  .b-icon { background: rgba(186,117,23,0.15); } .b-card.c-gold  .b-icon svg { stroke: var(--gold); }
+  .b-card.c-teal  .b-icon { background: rgba(15,110,86,0.12); }  .b-card.c-teal  .b-icon svg { stroke: var(--teal); }
+  .b-card.c-coral .b-icon { background: rgba(153,60,29,0.1); }   .b-card.c-coral .b-icon svg { stroke: var(--coral); }
+
+  .b-card-body { padding: 0.85rem 1.1rem 1.1rem; flex: 1; }
+  .b-card-body h3 { font-size: 0.9rem; font-weight: 700; color: var(--slate); margin-bottom: 0.3rem; line-height: 1.25; }
+  .b-card-body p  { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+
+  /* TRIGGER CTA CARD */
+  .trigger-cta {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+    border-radius: var(--r);
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 24px rgba(12,68,124,0.18);
+    flex-wrap: wrap;
+  }
+  .trigger-cta-text h3 { font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.3rem; }
+  .trigger-cta-text p  { font-size: 0.83rem; color: var(--navy-lt); line-height: 1.5; }
+  .trigger-cta-btn { background: var(--gold); color: #fff; padding: 0.65rem 1.6rem; border-radius: 30px; font-size: 0.85rem; font-weight: 700; text-decoration: none; letter-spacing: 0.04em; white-space: nowrap; transition: background 0.18s; flex-shrink: 0; }
+  .trigger-cta-btn:hover { background: #854f0b; }
+
+  /* NOTE */
+  .note-box { background: var(--navy-pale); border: 1.5px solid var(--border); border-left: 5px solid var(--navy-mid); border-radius: var(--r-sm); padding: 1rem 1.25rem; font-size: 0.82rem; color: var(--slate); line-height: 1.6; display: flex; gap: 10px; margin-bottom: 1.5rem; }
+
+  /* FOOTER */
+  .site-footer { background: var(--navy); border-top: 4px solid var(--gold); padding: 1.75rem 2.5rem; }
+  .footer-inner { max-width: 1140px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-brand { font-family: 'Lora', serif; font-size: 1rem; color: #fff; font-weight: 700; }
+  .footer-copy  { font-size: 0.75rem; color: var(--navy-lt); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 0.75rem; color: var(--navy-lt); text-decoration: none; }
+  .footer-links a:hover { color: var(--gold-lt); }
+
+  @media (max-width: 960px)  { .benefits-grid { grid-template-columns: repeat(3, 1fr); } .count-band { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 680px)  { .benefits-grid { grid-template-columns: repeat(2, 1fr); } .page-hero h1 { font-size: 1.75rem; } .header-nav { display: none; } }
+  @media (max-width: 420px)  { .benefits-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>Insurance Review Services &nbsp;·&nbsp; <a href="LTCCPAS_INDEX.html">LTCCPAS.com</a> &nbsp;·&nbsp; Withbert W. Payne, CPA</span>
+  <span id="topbar-date"></span>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7l7-4z"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">LTCCPAS.com</div>
+        <div class="brand-sub">Insurance Review Services &nbsp;·&nbsp; Withbert W. Payne, CPA</div>
+      </div>
+    </div>
+    <nav class="header-nav" aria-label="Site navigation">
+      <a href="LTCCPAS_INDEX.html">Home</a>
+      <a href="#">Education</a>
+      <a href="#" class="active">Products</a>
+      <a href="LTC_Key_Statistics.html">Statistics</a>
+      <a href="What_Initiates_a_Long-Term_Care_Claim_.html">Claim Triggers</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+      LTC Coverage
+    </div>
+    <h1>Long-Term Care Benefits</h1>
+    <p>What long-term care insurance actually covers — 12 qualifying benefit categories across all care settings, from home-based care to international facilities.</p>
+  </div>
+</div>
+
+<main class="main-wrap">
+
+  <!-- COUNT BAND -->
+  <div class="count-band">
+    <div class="count-item">
+      <div class="count-num">12</div>
+      <div class="count-label">Covered Benefit Categories</div>
+    </div>
+    <div class="count-item">
+      <div class="count-num">Home</div>
+      <div class="count-label">to International Facility</div>
+    </div>
+    <div class="count-item">
+      <div class="count-num">All</div>
+      <div class="count-label">LTC Facility Levels Covered</div>
+    </div>
+    <div class="count-item">
+      <div class="count-num">24/7</div>
+      <div class="count-label">Care Coordination Support</div>
+    </div>
+  </div>
+
+  <!-- BENEFITS HEADING -->
+  <div class="sec-head">
+    <div class="sec-icon teal">
+      <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+    </div>
+    <h2>Covered Long-Term Care Benefits</h2>
+    <div class="sec-rule"></div>
+  </div>
+
+  <!-- 12 BENEFIT CARDS -->
+  <div class="benefits-grid">
+
+    <div class="b-card c-navy">
+      <div class="b-card-top">
+        <div class="b-num">01</div>
+        <div class="b-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </div>
+      </div>
+      <div class="b-card-body">
+        <h3>Informal Care</h3>
+        <p>Care provided by family members or trusted friends in the home — one of the most commonly used and valuable benefit categories.</p>
+      </div>
+    </div>
+
+    <div class="b-card c-gold">
+      <div class="b-card-top">
+        <div class="b-num">02</div>
+        <div class="b-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+      </div>
+      <div class="b-card-body">
+        <h3>Adult Day Care</h3>
+        <p>Supervised daytime programs offering health, social, and therapeutic services — ideal for those living at home with a working caregiver.</p>
+      </div>
+    </div>
+
+    <div class="b-card c-teal">
+      <div class="b-card-top">
+        <div class="b-num">03</div>
+        <div class="b-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+      </div>
+      <div class="b-card-body">
+        <h3>Home Health Care</h3>
+        <p>Professional skilled nursing, physical therapy, occupational therapy, and related services delivered directly in the home.</p>
+      </div>
+    </div>
+
+    <div class="b-card c-coral">
+      <div class="b-card-top">
+        <div class="b-num">04</div>
+        <div class="b-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+        </div>
+      </div>
+      <div class="b-card-body">
+        <h3>LTC Facility — All Levels</h3>
+        <p>Coverage across all levels of a licensed long-term care facility — from custodial and intermediate care to full skilled nursing.</p>
+      </div>
+    </div>
+
+    <div class="b-card c-navy">
+      <div class="b-card-top">
+        <div class="b-num">05</div>
+        <div class="b-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+      </div>
+      <div class="b-card-body">
+        <h3>Assisted Living Facility</h3>
+        <p>Room, board, and personal assistance services in a licensed assisted living community — the fastest-growing care setting in America.</p>
+      </div>
+    </div>
+
+    <div class="b-card c-gold">
+      <div class="b-card-top">
+        <div class="b-num">06</div>
+        <div class="b-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+      </div>
+      <div class="b-card-body">
+        <h3>Hospice Care</h3>
+        <p>End-of-life comfort and palliative care services from a licensed hospice organization, provided in any qualifying setting.</p>
+      </div>
+    </div>
+
+    <div class="b-card c-teal">
+      <div class="b-card-top">
+        <div class="b-num">07</div>
+        <div class="b-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v5a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V4z"/><path d="M8 13v8M16 13v8M6 21h12"/></svg>
+        </div>
+      </div>
+      <div class="b-card-body">
+        <h3>Respite Care</h3>
+        <p>Temporary relief for primary informal caregivers — allows family members to rest while the insured receives professional care.</p>
+      </div>
+    </div>
+
+    <div class="b-card c-coral">
+      <div class="b-card-top">
+        <div class="b-num">08</div>
+        <div class="b-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        </div>
+      </div>
+      <div class="b-card-body">
+        <h3>Bed Reservation</h3>
+        <p>Holds a nursing home or facility bed during a temporary hospitalization — preventing costly loss of placement in a care community.</p>
+      </div>
+    </div>
+
+    <div class="b-card c-navy">
+      <div class="b-card-top">
+        <div class="b-num">09</div>
+        <div class="b-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+      </div>
+      <div class="b-card-body">
+        <h3>International Facility</h3>
+        <p>LTC benefits extend to qualifying care facilities outside the United States — providing global coverage for expatriates and frequent travelers.</p>
+      </div>
+    </div>
+
+    <div class="b-card c-gold">
+      <div class="b-card-top">
+        <div class="b-num">10</div>
+        <div class="b-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+      </div>
+      <div class="b-card-body">
+        <h3>Care Coordination</h3>
+        <p>Professional assessment, planning, and coordination of care services — connecting the insured with the right providers and settings.</p>
+      </div>
+    </div>
+
+    <div class="b-card c-teal">
+      <div class="b-card-top">
+        <div class="b-num">11</div>
+        <div class="b-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+        </div>
+      </div>
+      <div class="b-card-body">
+        <h3>Caregiver Consultant</h3>
+        <p>Access to a professional caregiver consultant who guides families through care decisions, transitions, and resource identification.</p>
+      </div>
+    </div>
+
+    <div class="b-card c-coral">
+      <div class="b-card-top">
+        <div class="b-num">12</div>
+        <div class="b-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
+        </div>
+      </div>
+      <div class="b-card-body">
+        <h3>Supportive Equipment</h3>
+        <p>Durable medical equipment and adaptive devices that help the insured remain safe and independent — at home or in a care facility.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- NOTE -->
+  <div class="note-box">
+    <span style="color:var(--navy-mid); font-size:1.15rem; flex-shrink:0; margin-top:1px;">ⓘ</span>
+    <div>Benefit details, coverage limits, and exclusions vary by policy. Always review the Outline of Coverage provided by your licensed producer. Contact Withbert W. Payne, CPA to discuss which benefit categories apply to your specific policy and situation.</div>
+  </div>
+
+  <!-- TRIGGER CTA -->
+  <!-- DEATH BENEFITS SECTION -->
+  <div class="sec-head" style="margin-top:2rem;">
+    <div class="sec-icon" style="background:var(--gold-pale);">
+      <svg viewBox="0 0 24 24" style="stroke:var(--gold);fill:none;stroke-width:1.8;width:18px;height:18px;"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </div>
+    <h2 style="font-family:'Lora',serif;font-size:1.2rem;font-weight:700;color:var(--slate);">Death Benefits</h2>
+    <div style="flex:1;height:1px;background:linear-gradient(to right,var(--border),transparent);"></div>
+  </div>
+
+  <div style="background:var(--white);border:1.5px solid var(--border-lt);border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(12,68,124,.08);margin-bottom:2rem;">
+    <div style="background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);padding:1.25rem 1.75rem;border-bottom:3px solid var(--gold);display:flex;align-items:center;gap:12px;">
+      <div style="width:38px;height:38px;border-radius:9px;background:rgba(181,212,244,.15);border:1px solid rgba(181,212,244,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:none;stroke:var(--gold-lt);stroke-width:1.7;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+      </div>
+      <h3 style="font-family:'Lora',serif;font-size:1.05rem;font-weight:700;color:#fff;">What Happens If Long-Term Care Is Never Needed?</h3>
+    </div>
+    <div style="padding:1.6rem 1.75rem;">
+      <p style="font-size:.95rem;color:var(--body);line-height:1.75;margin-bottom:1.25rem;">Amounts not paid out for long-term care expenses are passed on <strong>income-tax free</strong> to the named beneficiary. This is the fundamental advantage of asset-based LTC over traditional "use it or lose it" policies — your premium is never wasted.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div style="background:var(--gold-pale);border:2px solid var(--gold-lt);border-radius:14px;padding:1.25rem 1.1rem;text-align:center;">
+          <div style="font-family:'Lora',serif;font-size:1.8rem;font-weight:700;color:var(--gold);line-height:1;margin-bottom:.35rem;">100%</div>
+          <div style="font-size:.82rem;font-weight:600;color:var(--slate);margin-bottom:.25rem;">Tax-Free to Named Beneficiary</div>
+          <div style="font-size:.75rem;color:var(--muted);">Unused LTC benefit passes as a death benefit, income-tax free</div>
+        </div>
+        <div style="background:var(--navy-pale);border:2px solid var(--border);border-radius:14px;padding:1.25rem 1.1rem;text-align:center;">
+          <div style="font-family:'Lora',serif;font-size:1.8rem;font-weight:700;color:var(--navy);line-height:1;margin-bottom:.35rem;">$0</div>
+          <div style="font-size:.82rem;font-weight:600;color:var(--slate);margin-bottom:.25rem;">Wasted if Care is Never Needed</div>
+          <div style="font-size:.75rem;color:var(--muted);">Unlike traditional LTCi — every dollar has a destination</div>
+        </div>
+      </div>
+      <div style="background:var(--navy-pale);border-left:5px solid var(--navy-mid);border-radius:0 8px 8px 0;padding:.85rem 1.1rem;margin-top:1.1rem;font-size:.84rem;color:var(--slate);line-height:1.6;">
+        <strong>Pre-existing conditions</strong> are covered if fully disclosed at the time of application. Benefits are not excluded if the chronically ill individual has LTC costs due to a mental or nervous disorder.
+      </div>
+    </div>
+  </div>
+
+  <div class="trigger-cta">
+    <div class="trigger-cta-text">
+      <h3>What Initiates a Long-Term Care Claim?</h3>
+      <p>Benefit triggers — the ADL deficit standard and cognitive impairment criteria — are covered on their own dedicated page, including the physician certification and elimination period requirements.</p>
+    </div>
+    <a href="What_Initiates_a_Long-Term_Care_Claim_.html" class="trigger-cta-btn">View Benefit Triggers →</a>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">LTCCPAS.com</div>
+    <div class="footer-copy">© 2026 Insurance Review Services · Withbert W. Payne, CPA, CGMA · CA License No. 0E90257 · San Ramon, CA</div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Legal Terms</a>
+      <a href="LTCCPAS_INDEX.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const now = new Date();
+  document.getElementById('topbar-date').textContent =
+    now.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+</script>
+</body>
+</html>

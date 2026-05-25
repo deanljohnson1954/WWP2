@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Key LTC Statistics — LTCCPAS.com</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:       #0c447c;
+    --navy-mid:   #185fa5;
+    --navy-light: #b5d4f4;
+    --navy-pale:  #e6f1fb;
+    --gold:       #ba7517;
+    --gold-mid:   #ef9f27;
+    --gold-light: #fac775;
+    --gold-pale:  #faeeda;
+    --teal:       #0f6e56;
+    --teal-light: #9fe1cb;
+    --teal-pale:  #e1f5ee;
+    --coral:      #993c1d;
+    --coral-pale: #faece7;
+    --slate:      #1e3a5f;
+    --body:       #334155;
+    --muted:      #64748b;
+    --lighter:    #94a3b8;
+    --border:     #b5d4f4;
+    --border-lt:  #dbeafe;
+    --bg:         #f0f5fb;
+    --white:      #ffffff;
+    --radius:     14px;
+    --radius-sm:  8px;
+    --radius-lg:  20px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: var(--bg);
+    color: var(--body);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--navy);
+    padding: 0.45rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(181,212,244,0.15);
+  }
+  .topbar span { font-size: 0.75rem; color: var(--navy-light); letter-spacing: 0.04em; }
+  .topbar a { color: var(--gold-light); text-decoration: none; }
+
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--navy);
+    padding: 0 2.5rem;
+    border-bottom: 3px solid var(--gold);
+  }
+  .header-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 1.4rem 0;
+  }
+  .brand-badge {
+    width: 52px; height: 52px;
+    background: var(--gold);
+    border-radius: 13px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 4px rgba(186,117,23,0.25);
+  }
+  .brand-badge svg { width: 26px; height: 26px; stroke: #fff; fill: none; stroke-width: 1.6; }
+  .brand-name {
+    font-family: 'Lora', serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+  .brand-sub {
+    font-size: 0.72rem;
+    color: var(--navy-light);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  .header-nav {
+    display: flex;
+    align-items: stretch;
+  }
+  .header-nav a {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--navy-light);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    border-bottom: 3px solid transparent;
+    transition: color 0.18s, border-color 0.18s;
+    white-space: nowrap;
+  }
+  .header-nav a:hover { color: #fff; border-bottom-color: var(--gold-light); }
+  .header-nav a.active { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+  /* ── PAGE HERO ── */
+  .page-hero {
+    background: linear-gradient(135deg, #0c447c 0%, #185fa5 55%, #0f6e56 100%);
+    padding: 3rem 2.5rem 3.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 15% 50%, rgba(186,117,23,0.12) 0%, transparent 50%),
+      radial-gradient(circle at 85% 20%, rgba(15,110,86,0.15) 0%, transparent 45%);
+  }
+  .page-hero-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .page-hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(186,117,23,0.2);
+    border: 1px solid rgba(250,199,117,0.35);
+    border-radius: 30px;
+    padding: 4px 14px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .page-hero h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    max-width: 700px;
+  }
+  .page-hero p {
+    font-size: 1.05rem;
+    color: var(--navy-light);
+    max-width: 640px;
+    line-height: 1.65;
+    margin-bottom: 1.75rem;
+  }
+  .hero-source-bar {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .hero-source {
+    font-size: 0.72rem;
+    color: rgba(181,212,244,0.7);
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .hero-source::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold-mid);
+    flex-shrink: 0;
+  }
+
+  /* ── MAIN ── */
+  .main-wrap {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 5rem;
+  }
+
+  /* ── SECTION DIVIDER ── */
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 3rem 0 1.5rem;
+  }
+  .section-head:first-of-type { margin-top: 0; }
+  .section-head-icon {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .section-head-icon svg { width: 20px; height: 20px; fill: none; stroke-width: 1.7; }
+  .section-head-icon.navy { background: var(--navy-pale); }
+  .section-head-icon.navy svg { stroke: var(--navy-mid); }
+  .section-head-icon.gold { background: var(--gold-pale); }
+  .section-head-icon.gold svg { stroke: var(--gold); }
+  .section-head-icon.teal { background: var(--teal-pale); }
+  .section-head-icon.teal svg { stroke: var(--teal); }
+  .section-head-icon.coral { background: var(--coral-pale); }
+  .section-head-icon.coral svg { stroke: var(--coral); }
+  .section-head-title { flex: 1; }
+  .section-head-title h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--slate);
+    line-height: 1.2;
+  }
+  .section-head-title p {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .section-rule {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, var(--border), transparent);
+  }
+
+  /* ── BIG STAT BAND ── */
+  .stat-band {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0;
+    background: var(--navy);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 2px solid var(--navy-mid);
+    box-shadow: 0 8px 32px rgba(12,68,124,0.18);
+    margin-bottom: 2rem;
+  }
+  .stat-band-item {
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    border-right: 1px solid rgba(181,212,244,0.15);
+    position: relative;
+  }
+  .stat-band-item:last-child { border-right: none; }
+  .stat-band-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 20%; right: 20%;
+    height: 2px;
+    background: var(--gold);
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .stat-band-item:hover::after { opacity: 1; }
+  .stat-band-num {
+    font-family: 'Lora', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .stat-band-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--navy-light);
+    line-height: 1.3;
+    margin-bottom: 0.3rem;
+  }
+  .stat-band-note {
+    font-size: 0.72rem;
+    color: rgba(181,212,244,0.55);
+    line-height: 1.4;
+  }
+
+  /* ── CARD LAYOUTS ── */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 1rem;
+  }
+  .grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 1rem;
+  }
+  .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 1rem;
+  }
+
+  /* ── STAT CARD ── */
+  .stat-card {
+    background: var(--white);
+    border: 1.5px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.25rem;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .stat-card:hover {
+    box-shadow: 0 6px 24px rgba(12,68,124,0.10);
+    transform: translateY(-2px);
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+  }
+  .stat-card.navy::before { background: linear-gradient(90deg, var(--navy), var(--navy-mid)); }
+  .stat-card.gold::before { background: linear-gradient(90deg, var(--gold), var(--gold-mid)); }
+  .stat-card.teal::before { background: linear-gradient(90deg, var(--teal), #1d9e75); }
+  .stat-card.coral::before { background: linear-gradient(90deg, var(--coral), #d85a30); }
+
+  .stat-card-num {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+  .stat-card.navy .stat-card-num { color: var(--navy); }
+  .stat-card.gold .stat-card-num { color: var(--gold); }
+  .stat-card.teal .stat-card-num { color: var(--teal); }
+  .stat-card.coral .stat-card-num { color: var(--coral); }
+
+  .stat-card-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--slate);
+    margin-bottom: 0.35rem;
+  }
+  .stat-card-desc {
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ── GENDER SPLIT CARD ── */
+  .gender-card {
+    background: var(--white);
+    border: 1.5px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .gender-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--navy), var(--gold));
+  }
+  .gender-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+  .gender-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .gender-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--slate);
+    width: 80px;
+    flex-shrink: 0;
+  }
+  .gender-bar-wrap {
+    flex: 1;
+    background: var(--bg);
+    border-radius: 4px;
+    height: 22px;
+    overflow: hidden;
+    border: 1px solid var(--border-lt);
+  }
+  .gender-bar {
+    height: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+  }
+  .gender-bar.female { background: linear-gradient(90deg, var(--navy), var(--navy-mid)); }
+  .gender-bar.male   { background: linear-gradient(90deg, var(--gold), var(--gold-mid)); }
+  .gender-bar-pct {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .gender-stat {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--slate);
+    width: 60px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* ── AGE BAND TABLE CARD ── */
+  .age-card {
+    background: var(--white);
+    border: 1.5px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .age-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--teal), #1d9e75);
+  }
+  .age-table-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+  .age-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 9px;
+  }
+  .age-band {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--slate);
+    width: 55px;
+    flex-shrink: 0;
+  }
+  .age-bar-wrap {
+    flex: 1;
+    background: var(--teal-pale);
+    border-radius: 4px;
+    height: 18px;
+    overflow: hidden;
+  }
+  .age-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--teal), #1d9e75);
+    border-radius: 4px;
+  }
+  .age-pct {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--teal);
+    width: 42px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* ── CLAIM REASON CARD ── */
+  .reason-card {
+    background: var(--white);
+    border: 1.5px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .reason-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--coral), #d85a30);
+  }
+  .reason-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+  .reason-group-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0.75rem 0 0.4rem;
+  }
+  .reason-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 7px;
+  }
+  .reason-name {
+    font-size: 0.8rem;
+    color: var(--body);
+    width: 170px;
+    flex-shrink: 0;
+    line-height: 1.3;
+  }
+  .reason-bar-wrap {
+    flex: 1;
+    background: var(--coral-pale);
+    border-radius: 4px;
+    height: 16px;
+    overflow: hidden;
+  }
+  .reason-bar-fill {
+    height: 100%;
+    border-radius: 4px;
+  }
+  .reason-bar-fill.cog  { background: linear-gradient(90deg, var(--coral), #d85a30); }
+  .reason-bar-fill.phys { background: linear-gradient(90deg, var(--gold), var(--gold-mid)); }
+  .reason-bar-fill.ill  { background: linear-gradient(90deg, var(--navy-mid), var(--navy)); }
+  .reason-bar-fill.oth  { background: #b4b2a9; }
+  .reason-pct {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--coral);
+    width: 34px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .reason-pct.gold-t { color: var(--gold); }
+  .reason-pct.navy-t { color: var(--navy-mid); }
+  .reason-pct.gray-t { color: var(--muted); }
+
+  /* ── CARE SITE CARD ── */
+  .care-site-card {
+    background: var(--white);
+    border: 1.5px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .care-site-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--navy-mid), var(--teal));
+  }
+  .care-site-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.1rem;
+  }
+  .care-site-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    gap: 8px;
+    align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border-lt);
+  }
+  .care-site-row:last-child { border-bottom: none; }
+  .care-site-name { font-size: 0.85rem; font-weight: 600; color: var(--slate); }
+  .care-site-arrow { font-size: 0.85rem; color: var(--lighter); }
+  .care-pct {
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    min-width: 44px;
+    text-align: center;
+  }
+  .care-pct.initial { background: var(--navy-pale); color: var(--navy); }
+  .care-pct.final   { background: var(--teal-pale);  color: var(--teal); }
+  .care-site-hdr {
+    display: grid;
+    grid-template-columns: 1fr auto auto auto;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .care-site-hdr span {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--lighter);
+    text-align: center;
+  }
+
+  /* ── CLAIM END CARD ── */
+  .claim-end-card {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .claim-end-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--navy-light);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .claim-end-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .claim-end-label { font-size: 0.85rem; color: rgba(255,255,255,0.8); width: 130px; flex-shrink: 0; }
+  .claim-end-bar-wrap {
+    flex: 1;
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    height: 24px;
+    overflow: hidden;
+  }
+  .claim-end-bar {
+    height: 100%;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+  }
+  .claim-end-bar.death   { background: linear-gradient(90deg, var(--gold), var(--gold-mid)); }
+  .claim-end-bar.exhaust { background: linear-gradient(90deg, var(--coral), #d85a30); }
+  .claim-end-bar.other   { background: rgba(255,255,255,0.2); }
+  .claim-end-bar-pct { font-size: 0.78rem; font-weight: 700; color: #fff; }
+  .claim-end-num { font-size: 0.88rem; font-weight: 700; color: var(--gold-light); width: 40px; text-align: right; flex-shrink: 0; }
+
+  /* ── LONGEST CLAIMS TABLE ── */
+  .longest-card {
+    background: var(--gold-pale);
+    border: 2px solid var(--gold-light);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .longest-card::after {
+    content: '★';
+    position: absolute;
+    top: 1rem; right: 1.25rem;
+    font-size: 1.2rem;
+    color: var(--gold-light);
+  }
+  .longest-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+  .longest-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(186,117,23,0.15);
+  }
+  .longest-row:last-child { border-bottom: none; }
+  .longest-months {
+    font-family: 'Lora', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--gold);
+    width: 48px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+  .longest-duration {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--slate);
+    flex: 1;
+  }
+
+  /* ── COST OF CARE TABLE ── */
+  .cost-table-card {
+    background: var(--white);
+    border: 1.5px solid var(--border-lt);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 12px rgba(12,68,124,0.06);
+  }
+  .cost-table-head {
+    background: var(--navy);
+    display: grid;
+    grid-template-columns: 1fr 110px 110px 1fr;
+    gap: 0;
+    padding: 0.75rem 1.25rem;
+  }
+  .cost-table-head span {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--navy-light);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .cost-table-head span:not(:first-child) { text-align: right; }
+  .cost-table-row {
+    display: grid;
+    grid-template-columns: 1fr 110px 110px 1fr;
+    gap: 0;
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid var(--border-lt);
+    transition: background 0.15s;
+    align-items: center;
+  }
+  .cost-table-row:last-child { border-bottom: none; }
+  .cost-table-row:hover { background: var(--navy-pale); }
+  .cost-table-row.highlight { background: var(--gold-pale); }
+  .cost-row-name { font-size: 0.88rem; font-weight: 600; color: var(--slate); }
+  .cost-row-num {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: right;
+  }
+  .cost-table-row.highlight .cost-row-num { color: var(--gold); }
+  .cost-row-note {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-align: right;
+  }
+  .cost-row-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: auto;
+  }
+  .cost-row-tag.hot  { background: var(--coral-pale); color: var(--coral); }
+  .cost-row-tag.top  { background: var(--gold-pale);  color: var(--gold); }
+  .cost-row-tag.mem  { background: var(--teal-pale);  color: var(--teal); }
+
+  /* ── UTILIZATION CARD ── */
+  .util-card {
+    background: var(--white);
+    border: 1.5px solid var(--border-lt);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .util-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--navy-mid), var(--navy));
+  }
+  .util-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+  .util-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .util-name { font-size: 0.82rem; color: var(--body); width: 155px; flex-shrink: 0; line-height: 1.3; }
+  .util-bar-wrap {
+    flex: 1;
+    background: var(--navy-pale);
+    border-radius: 4px;
+    height: 18px;
+    overflow: hidden;
+  }
+  .util-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--navy), var(--navy-mid));
+    border-radius: 4px;
+  }
+  .util-pct { font-size: 0.78rem; font-weight: 700; color: var(--navy); width: 36px; text-align: right; flex-shrink: 0; }
+
+  /* ── NOTE CALLOUT ── */
+  .note-box {
+    background: var(--navy-pale);
+    border: 1.5px solid var(--border);
+    border-left: 5px solid var(--navy-mid);
+    border-radius: var(--radius-sm);
+    padding: 1rem 1.25rem;
+    font-size: 0.83rem;
+    color: var(--slate);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 10px;
+  }
+  .note-box-icon { color: var(--navy-mid); font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+  .gold-note {
+    background: var(--gold-pale);
+    border-color: var(--gold-light);
+    border-left-color: var(--gold);
+  }
+  .gold-note .note-box-icon { color: var(--gold); }
+
+  /* ── SOURCE FOOTER ── */
+  .source-line {
+    font-size: 0.72rem;
+    color: var(--lighter);
+    text-align: center;
+    margin-top: 1.25rem;
+    letter-spacing: 0.02em;
+  }
+
+  /* ── SITE FOOTER ── */
+  .site-footer {
+    background: var(--navy);
+    border-top: 3px solid var(--gold);
+    padding: 1.75rem 2.5rem;
+  }
+  .footer-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-brand { font-family: 'Lora', serif; font-size: 1rem; color: #fff; font-weight: 700; }
+  .footer-copy  { font-size: 0.75rem; color: var(--navy-light); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 0.75rem; color: var(--navy-light); text-decoration: none; }
+  .footer-links a:hover { color: var(--gold-light); }
+
+  @media (max-width: 900px) {
+    .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .stat-band { grid-template-columns: repeat(2, 1fr); }
+    .stat-band-item { border-right: none; border-bottom: 1px solid rgba(181,212,244,0.15); }
+  }
+  @media (max-width: 640px) {
+    .grid-3, .grid-4, .grid-2 { grid-template-columns: 1fr; }
+    .cost-table-head, .cost-table-row { grid-template-columns: 1fr 90px 90px; }
+    .cost-row-note { display: none; }
+    .page-hero h1 { font-size: 1.7rem; }
+    .header-nav { display: none; }
+    .main-wrap { padding: 1.5rem 1rem 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>Insurance Review Services &nbsp;·&nbsp; <a href="index.html">LTCCPAS.com</a> &nbsp;·&nbsp; Clayton, CA</span>
+  <span id="topbar-date"></span>
+</div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 4.5-3 8-7 9-4-1-7-4.5-7-9V7l7-4z"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">LTCCPAS.com</div>
+        <div class="brand-sub">Insurance Review Services &nbsp;·&nbsp; Withbert W. Payne, CPA</div>
+      </div>
+    </div>
+    <nav class="header-nav" aria-label="Site navigation">
+      <a href="LTCCPAS_INDEX.html">Home</a>
+      <a href="#">Education</a>
+      <a href="#">Products</a>
+      <a href="#" class="active">Statistics</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-eyebrow">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>
+      LTC Statistics &amp; Data
+    </div>
+    <h1>Key Long-Term Care Statistics</h1>
+    <p>The numbers your clients need to understand — from average claim duration and age of first claim to care costs, claim triggers, and utilization patterns across all care settings.</p>
+    <div class="hero-source-bar">
+      <span class="hero-source">OneAmerica Claims Data (1989–2022)</span>
+      <span class="hero-source">Connecticut Partnership for LTC (2024)</span>
+      <span class="hero-source">Genworth Cost of Care Survey 2025</span>
+      <span class="hero-source">AALTCI Research</span>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="main-wrap">
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- BIG HEADLINE STATS -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="stat-band" style="margin-top:0; margin-bottom:2.5rem;">
+    <div class="stat-band-item">
+      <div class="stat-band-num">70%</div>
+      <div class="stat-band-label">Adults 65+ Who Will Need LTC</div>
+      <div class="stat-band-note">Most families are unprepared for this risk</div>
+    </div>
+    <div class="stat-band-item">
+      <div class="stat-band-num">3.2 yrs</div>
+      <div class="stat-band-label">Average Length of LTC Stay</div>
+      <div class="stat-band-note">All long-term care settings combined</div>
+    </div>
+    <div class="stat-band-item">
+      <div class="stat-band-num">20%</div>
+      <div class="stat-band-label">Will Need Care 5+ Years</div>
+      <div class="stat-band-note">1 in 5 individuals face extended care needs</div>
+    </div>
+    <div class="stat-band-item">
+      <div class="stat-band-num">$315K+</div>
+      <div class="stat-band-label">Avg. 3-Year Nursing Home Cost</div>
+      <div class="stat-band-note">At today's California rates</div>
+    </div>
+    <div class="stat-band-item">
+      <div class="stat-band-num">47%</div>
+      <div class="stat-band-label">Denial Rate After Age 70</div>
+      <div class="stat-band-note">LTC underwriting tightens sharply with age</div>
+    </div>
+    <div class="stat-band-item">
+      <div class="stat-band-num">11%</div>
+      <div class="stat-band-label">Americans With LTC Coverage</div>
+      <div class="stat-band-note">The coverage gap is enormous</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- LENGTH OF STAY -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="section-head">
+    <div class="section-head-icon navy">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+    </div>
+    <div class="section-head-title">
+      <h2>Average Length of Stay</h2>
+      <p>How long do people actually need care?</p>
+    </div>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="grid-4" style="margin-bottom:1.5rem;">
+    <div class="stat-card navy">
+      <div class="stat-card-num">3.2 yrs</div>
+      <div class="stat-card-title">Overall Average</div>
+      <div class="stat-card-desc">Across all long-term care settings — home, assisted living, and skilled nursing combined.</div>
+    </div>
+    <div class="stat-card gold">
+      <div class="stat-card-num">3.7 yrs</div>
+      <div class="stat-card-title">Women — Average Stay</div>
+      <div class="stat-card-desc">Women outlive men and require care for nearly twice as long on average.</div>
+    </div>
+    <div class="stat-card teal">
+      <div class="stat-card-num">2.2 yrs</div>
+      <div class="stat-card-title">Men — Average Stay</div>
+      <div class="stat-card-desc">Male claimants average a shorter duration, though intensity of care may be higher.</div>
+    </div>
+    <div class="stat-card coral">
+      <div class="stat-card-num">835 days</div>
+      <div class="stat-card-title">Nursing Home Average</div>
+      <div class="stat-card-desc">~2.3 years in skilled nursing. Short-term rehab discharges average just 270 days.</div>
+    </div>
+  </div>
+
+  <div class="note-box gold-note">
+    <span class="note-box-icon" aria-hidden="true">💡</span>
+    <div><strong>Sales Conversation Tip:</strong> "While the average stay is just over 3 years, 1 in 5 people will need care for 5 years or more — and women face nearly twice the risk as men. That's the scenario a well-designed LTC policy is built to protect against."</div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- ONEAMERICA CLAIMS DATA -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="section-head">
+    <div class="section-head-icon gold">
+      <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9l-6-6z"/><path d="M9 3v6h6"/></svg>
+    </div>
+    <div class="section-head-title">
+      <h2>OneAmerica Claims Analysis</h2>
+      <p>35+ years of claims experience — data from 1989 through 12/31/2022</p>
+    </div>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="grid-3" style="margin-bottom:1rem;">
+
+    <!-- Gender Split -->
+    <div class="gender-card">
+      <div class="gender-title">Claimant Gender Split</div>
+      <div class="gender-row">
+        <div class="gender-label">♀ Female</div>
+        <div class="gender-bar-wrap">
+          <div class="gender-bar female" style="width:73%"><span class="gender-bar-pct">73%</span></div>
+        </div>
+        <div class="gender-stat">73%</div>
+      </div>
+      <div class="gender-row">
+        <div class="gender-label">♂ Male</div>
+        <div class="gender-bar-wrap">
+          <div class="gender-bar male" style="width:27%"><span class="gender-bar-pct">27%</span></div>
+        </div>
+        <div class="gender-stat">27%</div>
+      </div>
+      <div style="margin-top:1rem; padding-top:0.75rem; border-top:1px solid var(--border-lt);">
+        <div style="font-size:0.72rem; color:var(--muted); margin-bottom:0.5rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em;">Claimant Ages</div>
+        <div style="display:flex; justify-content:space-between;">
+          <div style="text-align:center;">
+            <div style="font-family:'Lora',serif; font-size:1.4rem; font-weight:700; color:var(--navy);">39</div>
+            <div style="font-size:0.7rem; color:var(--muted);">Youngest</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:'Lora',serif; font-size:1.4rem; font-weight:700; color:var(--gold);">84</div>
+            <div style="font-size:0.7rem; color:var(--muted);">Average</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-family:'Lora',serif; font-size:1.4rem; font-weight:700; color:var(--teal);">103</div>
+            <div style="font-size:0.7rem; color:var(--muted);">Oldest</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Age of Initial Claim -->
+    <div class="age-card">
+      <div class="age-table-title">Age at Initial Claim</div>
+      <div class="age-row">
+        <div class="age-band">&lt; 69</div>
+        <div class="age-bar-wrap"><div class="age-bar-fill" style="width:11%"></div></div>
+        <div class="age-pct">3.41%</div>
+      </div>
+      <div class="age-row">
+        <div class="age-band">70–74</div>
+        <div class="age-bar-wrap"><div class="age-bar-fill" style="width:18%"></div></div>
+        <div class="age-pct">6.00%</div>
+      </div>
+      <div class="age-row">
+        <div class="age-band">75–79</div>
+        <div class="age-bar-wrap"><div class="age-bar-fill" style="width:40%"></div></div>
+        <div class="age-pct">13.17%</div>
+      </div>
+      <div class="age-row">
+        <div class="age-band">80–84</div>
+        <div class="age-bar-wrap"><div class="age-bar-fill" style="width:80%"></div></div>
+        <div class="age-pct">26.50%</div>
+      </div>
+      <div class="age-row">
+        <div class="age-band">85–89</div>
+        <div class="age-bar-wrap"><div class="age-bar-fill" style="width:93%"></div></div>
+        <div class="age-pct">30.34%</div>
+      </div>
+      <div class="age-row">
+        <div class="age-band">90–94</div>
+        <div class="age-bar-wrap"><div class="age-bar-fill" style="width:52%"></div></div>
+        <div class="age-pct">17.13%</div>
+      </div>
+      <div class="age-row">
+        <div class="age-band">95+</div>
+        <div class="age-bar-wrap"><div class="age-bar-fill" style="width:10%"></div></div>
+        <div class="age-pct">3.46%</div>
+      </div>
+    </div>
+
+    <!-- How Claims End -->
+    <div class="claim-end-card">
+      <div class="claim-end-title">How Claims End</div>
+      <div class="claim-end-row">
+        <div class="claim-end-label" style="color:#fff;">Death</div>
+        <div class="claim-end-bar-wrap"><div class="claim-end-bar death" style="width:75%"><span class="claim-end-bar-pct">75%</span></div></div>
+        <div class="claim-end-num">75%</div>
+      </div>
+      <div class="claim-end-row">
+        <div class="claim-end-label" style="color:#fff;">Exhaust Benefits</div>
+        <div class="claim-end-bar-wrap"><div class="claim-end-bar exhaust" style="width:11%"><span class="claim-end-bar-pct">11%</span></div></div>
+        <div class="claim-end-num">11%</div>
+      </div>
+      <div class="claim-end-row">
+        <div class="claim-end-label" style="color:#fff;">Other Reasons</div>
+        <div class="claim-end-bar-wrap"><div class="claim-end-bar other" style="width:14%"><span class="claim-end-bar-pct">14%</span></div></div>
+        <div class="claim-end-num">14%</div>
+      </div>
+      <div style="margin-top:auto; padding-top:1rem; border-top:1px solid rgba(181,212,244,0.15);">
+        <div style="font-size:0.75rem; color:rgba(181,212,244,0.6); line-height:1.5;">75% of claims end at death — meaning most policyholders receive benefits until the end of life. Only 11% exhaust their policy limits.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:1rem;">
+
+    <!-- Reason for Claim -->
+    <div class="reason-card">
+      <div class="reason-title">Reason for Initial Claim</div>
+
+      <div class="reason-group-label">Cognitive Issues — 55%</div>
+      <div class="reason-row">
+        <div class="reason-name">Nervous System (Alzheimer's, etc.)</div>
+        <div class="reason-bar-wrap"><div class="reason-bar-fill cog" style="width:53%"></div></div>
+        <div class="reason-pct">29%</div>
+      </div>
+      <div class="reason-row">
+        <div class="reason-name">Mental/Behavioral (Dementia)</div>
+        <div class="reason-bar-wrap"><div class="reason-bar-fill cog" style="width:47%"></div></div>
+        <div class="reason-pct">26%</div>
+      </div>
+
+      <div class="reason-group-label">Physical Issues — 28%</div>
+      <div class="reason-row">
+        <div class="reason-name">Musculoskeletal</div>
+        <div class="reason-bar-wrap"><div class="reason-bar-fill phys" style="width:36%"></div></div>
+        <div class="reason-pct gold-t">10%</div>
+      </div>
+      <div class="reason-row">
+        <div class="reason-name">Cerebrovascular (Stroke)</div>
+        <div class="reason-bar-wrap"><div class="reason-bar-fill phys" style="width:32%"></div></div>
+        <div class="reason-pct gold-t">9%</div>
+      </div>
+      <div class="reason-row">
+        <div class="reason-name">Accident / Injury</div>
+        <div class="reason-bar-wrap"><div class="reason-bar-fill phys" style="width:32%"></div></div>
+        <div class="reason-pct gold-t">9%</div>
+      </div>
+
+      <div class="reason-group-label">Illness-Related — 12%</div>
+      <div class="reason-row">
+        <div class="reason-name">Heart Disease</div>
+        <div class="reason-bar-wrap"><div class="reason-bar-fill ill" style="width:50%"></div></div>
+        <div class="reason-pct navy-t">7%</div>
+      </div>
+      <div class="reason-row">
+        <div class="reason-name">Cancer</div>
+        <div class="reason-bar-wrap"><div class="reason-bar-fill ill" style="width:36%"></div></div>
+        <div class="reason-pct navy-t">5%</div>
+      </div>
+
+      <div class="reason-group-label">Other — 5%</div>
+      <div class="reason-row">
+        <div class="reason-name">All other causes</div>
+        <div class="reason-bar-wrap"><div class="reason-bar-fill oth" style="width:36%"></div></div>
+        <div class="reason-pct gray-t">5%</div>
+      </div>
+    </div>
+
+    <!-- Care Site Transitions + Longest Claims -->
+    <div style="display:flex; flex-direction:column; gap:16px;">
+      <div class="care-site-card">
+        <div class="care-site-title">Care Site — Initial vs. Final Setting</div>
+        <div class="care-site-hdr">
+          <span></span>
+          <span></span>
+          <span style="color:var(--navy);">Initial</span>
+          <span style="color:var(--teal);">Final</span>
+        </div>
+        <div class="care-site-row">
+          <div class="care-site-name">🏠 Home Health Care</div>
+          <div class="care-site-arrow">→</div>
+          <div class="care-pct initial">32%</div>
+          <div class="care-pct final">26%</div>
+        </div>
+        <div class="care-site-row">
+          <div class="care-site-name">🏡 Assisted Living</div>
+          <div class="care-site-arrow">→</div>
+          <div class="care-pct initial">47%</div>
+          <div class="care-pct final">52%</div>
+        </div>
+        <div class="care-site-row">
+          <div class="care-site-name">🏥 Skilled Nursing</div>
+          <div class="care-site-arrow">→</div>
+          <div class="care-pct initial">21%</div>
+          <div class="care-pct final">23%</div>
+        </div>
+        <div style="margin-top:0.75rem; font-size:0.75rem; color:var(--muted);">Most claimants migrate from home care toward assisted living as needs intensify over time.</div>
+      </div>
+
+      <div class="longest-card">
+        <div class="longest-title">★ Longest Claims on Record (months)</div>
+        <div class="longest-row">
+          <div class="longest-months">244</div>
+          <div class="longest-duration">20 years, 4 months</div>
+        </div>
+        <div class="longest-row">
+          <div class="longest-months">192</div>
+          <div class="longest-duration">16 years</div>
+        </div>
+        <div class="longest-row">
+          <div class="longest-months">177</div>
+          <div class="longest-duration">14 years, 9 months</div>
+        </div>
+        <div class="longest-row">
+          <div class="longest-months">171</div>
+          <div class="longest-duration">14 years, 3 months</div>
+        </div>
+        <div class="longest-row">
+          <div class="longest-months">158</div>
+          <div class="longest-duration">13 years, 1 month</div>
+        </div>
+        <div style="margin-top:0.6rem; font-size:0.72rem; color:var(--gold); font-weight:600;">Source: OneAmerica — 35 years of claims experience</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- SERVICE UTILIZATION (CONNECTICUT) -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="section-head">
+    <div class="section-head-icon teal">
+      <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>
+    </div>
+    <div class="section-head-title">
+      <h2>Service Utilization by Claim Type</h2>
+      <p>Connecticut Partnership for LTC — 6,878 policyholders receiving benefit payments</p>
+    </div>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:1.5rem;">
+    <div class="util-card">
+      <div class="util-title">What Policyholders Claim For</div>
+      <div class="util-row">
+        <div class="util-name">Home Health Aide</div>
+        <div class="util-bar-wrap"><div class="util-bar-fill" style="width:100%"></div></div>
+        <div class="util-pct">53%</div>
+      </div>
+      <div class="util-row">
+        <div class="util-name">Assisted Living Facility</div>
+        <div class="util-bar-wrap"><div class="util-bar-fill" style="width:55%"></div></div>
+        <div class="util-pct">29%</div>
+      </div>
+      <div class="util-row">
+        <div class="util-name">Nursing Home</div>
+        <div class="util-bar-wrap"><div class="util-bar-fill" style="width:51%"></div></div>
+        <div class="util-pct">27%</div>
+      </div>
+      <div class="util-row">
+        <div class="util-name">Personal Emergency</div>
+        <div class="util-bar-wrap"><div class="util-bar-fill" style="width:38%"></div></div>
+        <div class="util-pct">20%</div>
+      </div>
+      <div class="util-row">
+        <div class="util-name">Personal Care</div>
+        <div class="util-bar-wrap"><div class="util-bar-fill" style="width:17%"></div></div>
+        <div class="util-pct">9%</div>
+      </div>
+      <div class="util-row">
+        <div class="util-name">Durable Medical Device</div>
+        <div class="util-bar-wrap"><div class="util-bar-fill" style="width:13%"></div></div>
+        <div class="util-pct">7%</div>
+      </div>
+      <div class="util-row">
+        <div class="util-name">Hospice Care</div>
+        <div class="util-bar-wrap"><div class="util-bar-fill" style="width:2%"></div></div>
+        <div class="util-pct">1%</div>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <div class="stat-card navy">
+        <div class="stat-card-num">60%</div>
+        <div class="stat-card-title">Home-Based Care Claims</div>
+        <div class="stat-card-desc">60% of all claimants filed for home health aide or skilled nursing home visit — confirming LTC as nursing-home avoidance protection.</div>
+      </div>
+      <div class="stat-card gold">
+        <div class="stat-card-num">$443,758</div>
+        <div class="stat-card-title">Average Policy Benefit at Claim</div>
+        <div class="stat-card-desc">Average available benefit at time of claim. The average actual claim paid was $156,775. Highest single claim: $2.64 million.</div>
+      </div>
+      <div class="stat-card teal">
+        <div class="stat-card-num">81</div>
+        <div class="stat-card-title">Mean Age at Claim (Women)</div>
+        <div class="stat-card-desc">59% of the 6,878 claimants were women, with a mean age of 81 at the time the claim was filed.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note-box">
+    <span class="note-box-icon" aria-hidden="true">ⓘ</span>
+    <div><strong>"This is really nursing-home avoidance protection — and the numbers validate that."</strong> — Jesse Slome, Director, American Association for Long-Term Care Insurance (AALTCI). Connecticut is the only state that publishes current LTC insurance claims data.</div>
+  </div>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!-- 2026 COST OF CARE -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="section-head">
+    <div class="section-head-icon coral">
+      <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+    </div>
+    <div class="section-head-title">
+      <h2>2026 Cost of Care — California</h2>
+      <p>What long-term care actually costs today (Source: Genworth Cost of Care Survey 2025)</p>
+    </div>
+    <div class="section-rule"></div>
+  </div>
+
+  <div class="cost-table-card">
+    <div class="cost-table-head">
+      <span>Care Setting</span>
+      <span>Monthly</span>
+      <span>Annual</span>
+      <span style="text-align:left; padding-left:8px;">Notes</span>
+    </div>
+    <div class="cost-table-row">
+      <div class="cost-row-name">Home Health Aide (44 hrs/wk)</div>
+      <div class="cost-row-num">$6,200</div>
+      <div class="cost-row-num">$74,400</div>
+      <div style="display:flex; align-items:center; padding-left:8px;"><span class="cost-row-tag hot">Fastest Growing</span></div>
+    </div>
+    <div class="cost-table-row">
+      <div class="cost-row-name">Adult Day Care</div>
+      <div class="cost-row-num">$1,900</div>
+      <div class="cost-row-num">$22,800</div>
+      <div style="padding-left:8px; font-size:0.75rem; color:var(--muted);">Social + medical supervision</div>
+    </div>
+    <div class="cost-table-row">
+      <div class="cost-row-name">Assisted Living Facility</div>
+      <div class="cost-row-num">$5,100</div>
+      <div class="cost-row-num">$61,200</div>
+      <div style="padding-left:8px; font-size:0.75rem; color:var(--muted);">Room, board &amp; basic care</div>
+    </div>
+    <div class="cost-table-row">
+      <div class="cost-row-name">Memory Care</div>
+      <div class="cost-row-num">$6,200</div>
+      <div class="cost-row-num">$74,400</div>
+      <div style="display:flex; align-items:center; padding-left:8px;"><span class="cost-row-tag mem">Dementia Care</span></div>
+    </div>
+    <div class="cost-table-row">
+      <div class="cost-row-name">Nursing Home — Semi-Private</div>
+      <div class="cost-row-num">$9,000</div>
+      <div class="cost-row-num">$108,000</div>
+      <div style="padding-left:8px; font-size:0.75rem; color:var(--muted);">24-hour skilled care</div>
+    </div>
+    <div class="cost-table-row highlight">
+      <div class="cost-row-name" style="font-weight:700;">Nursing Home — Private Room</div>
+      <div class="cost-row-num" style="font-weight:700;">$10,500</div>
+      <div class="cost-row-num" style="font-weight:700;">$126,000</div>
+      <div style="display:flex; align-items:center; padding-left:8px;"><span class="cost-row-tag top">Highest Cost</span></div>
+    </div>
+  </div>
+
+  <div class="source-line">Source: Genworth Cost of Care Survey 2025 | 2026 California estimates | OneAmerica Financial Partners (I-36337, 12/19/23) | Connecticut Partnership for Long-Term Care (2024) | AALTCI</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">LTCCPAS.com</div>
+    <div class="footer-copy">© 2026 Insurance Review Services · Withbert W. Payne, CPA, CGMA · CA License No. 0E90257 · San Ramon, CA</div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Legal Terms</a>
+      <a href="LTCCPAS_INDEX.html">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const now = new Date();
+  document.getElementById('topbar-date').textContent =
+    now.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+</script>
+
+</body>
+</html>
